@@ -1,0 +1,45 @@
+# Schema Information
+
+## projects
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+title       | string    | not null
+body        | text      | not null
+goal        | integer   | not null
+end_date    | date      | not null
+owner_id    | integer   | not null, foreign key (references users)
+category_id | integer   | not null, foreign key (references users)
+video_url   | string    | not null
+img_url     | string    | not null
+
+## backings
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+project_id  | integer   | not null, foreign key (references projects)
+backer_id   | integer   | not null, foreign key (references users)
+
+## categories
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+title       | string    | not null
+
+## rewards
+    column name    | data type | details
+-------------------|-----------|-----------------------
+id                 | integer   | not null, primary key
+project_id         | integer   | not null, foreign key (references projects)
+title              | string    | not null
+description        | string    | not null
+shipping_location  | string    | not null
+delivery_time      | date      | not null
+
+## users
+column name     | data type | details
+----------------|-----------|-----------------------
+id              | integer   | not null, primary key
+email           | string    | not null, unique
+password_digest | string    | not null
+session_token   | string    | not null, unique
