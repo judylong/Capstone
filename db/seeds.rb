@@ -21,3 +21,7 @@ p1 = Project.create(title: 'projectApple',
                     end_date: DateTime.new(2015, 10, 31, 11, 0, 0),
                     owner_id: 2,
                     category_id: 1)
+c1 = Category.create(title: 'category1')
+# r1 = Rewards.create(pledge_amount:)
+# r2
+# r3

@@ -5,7 +5,7 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 title       | string    | not null
-body        | text      | not null
+description | text      | not null
 goal        | integer   | not null
 end_date    | date      | not null
 owner_id    | integer   | not null, foreign key (references users)
@@ -32,9 +32,9 @@ title       | string    | not null
 id                 | integer   | not null, primary key
 project_id         | integer   | not null, foreign key (references projects)
 title              | string    | not null
-description        | string    | not null
-shipping_location  | string    | not null
-delivery_time      | date      | not null
+pledge_amount      | integer   | not null
+shipping_location  | string    |
+delivery_time      | date      | 
 
 ## users
 column name     | data type | details
