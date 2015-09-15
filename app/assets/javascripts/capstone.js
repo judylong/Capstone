@@ -4,7 +4,13 @@ window.Capstone = {
   Views: {},
   Routers: {},
   initialize: function() {
-    alert('Hello from Backbone!');
+    var projects = new Capstone.Collections.Projects();
+    projects.fetch();
+    new Capstone.Routers.Router({
+      $rootEl: $("#main"),
+      collection: projects
+    })
+    Backbone.history.start();
   }
 };
 
