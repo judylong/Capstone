@@ -22,6 +22,18 @@ p1 = Project.create(title: 'projectApple',
                     owner_id: 2,
                     category_id: 1)
 c1 = Category.create(title: 'category1')
-# r1 = Rewards.create(pledge_amount:)
-# r2
-# r3
+r1 = Reward.create(project_id: 1,
+                    pledge_amount: 5,
+                    description: "a high five for every five",
+                    limited_quantity: 150,
+                    estimated_delivery: Date.new(2020, 11),
+                    shipping_location: "Only United States")
+r2 = Reward.create(project_id: 1,
+                    pledge_amount: 15,
+                    description: "bobblehead of your favorite character",
+                    estimated_delivery: Date.new(2020, 12),
+                    shipping_location: "Anywhere in the world")
+r3 = Reward.create(project_id: 1,
+                    pledge_amount: 100,
+                    description: "a no questions asked",
+                    estimated_delivery: Date.new(2020, 11))
