@@ -10,7 +10,7 @@ A clone of Kickstarter built on Rails and Backbone. Users can:
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
 - [ ] Create accounts
-- [ ] Create sessions (log in)
+- [x] Create sessions (log in)
 - [ ] Create projects
 - [ ] View project
 - [ ] View projects by category
