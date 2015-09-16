@@ -5,7 +5,6 @@ window.Capstone = {
   Routers: {},
   initialize: function() {
     var projects = new Capstone.Collections.Projects();
-    projects.fetch();
     new Capstone.Routers.Router({
       $rootEl: $("#main"),
       collection: projects
