@@ -13,6 +13,19 @@
  *= require_tree .
  *= require_self
  */
+html, body, section, article, h1, p, strong, em, a {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+
+  font: inherit;
+  text-decoration: inherit;
+  text-align: inherit;
+  color: inherit;
+  background: transparent;
+}
+
 
 div .projects-index-item {
   border: solid 1px #d9d9de;
