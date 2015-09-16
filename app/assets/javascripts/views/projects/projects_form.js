@@ -7,10 +7,11 @@ Capstone.Views.ProjectForm = Backbone.View.extend({
     return this;
   },
   events: {
-    "click .submit-project": "submit"
+    "click button.submit-project": "submit"
   },
   submit: function(e) {
     e.preventDefault();
+    debugger
     var data = this.$el.serializeJSON();
     this.model.save(data, {
       success: function(){
