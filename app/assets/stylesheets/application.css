@@ -29,4 +29,9 @@ html, body, section, article, h1, p, strong, em, a {
 
 div .projects-index-item {
   border: solid 1px #d9d9de;
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
 }
