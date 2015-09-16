@@ -10,10 +10,10 @@ Capstone.Collections.Projects = Backbone.Collection.extend({
       this.add(model)
       model.fetch({
         error: function() {
-          this.remove(model)
+          this.remove(model);
         }.bind(this)
-      })
+      });
     }
-    return model
+    return model;
   }
 });
