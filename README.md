@@ -2,7 +2,7 @@
 
 [Heroku link][heroku]
 
-[heroku]: LinkTBD
+[heroku]: mycapstone.herokuapp.com
 
 ## Minimum Viable Product
 A clone of Kickstarter built on Rails and Backbone. Users can:
