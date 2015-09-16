@@ -18,7 +18,7 @@ Capstone.Routers.Router = Backbone.Router.extend({
 
   new: function() {
     var model = new Capstone.Models.Project();
-    var view = new Capstone.Views.ProjectForm({model: model});
+    var view = new Capstone.Views.ProjectForm({model: model, collection: this.collection});
     this._swapView(view);
   },
 

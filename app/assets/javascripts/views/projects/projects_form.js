@@ -1,12 +1,13 @@
 Capstone.Views.ProjectForm = Backbone.View.extend({
   template: JST['projects/project_form'],
+  tagName: "form",
   render: function() {
     var content = this.template({project: this.model});
     this.$el.html(content);
     return this;
   },
   events: {
-    "click button.submit-project": "submit"
+    "click .submit-project": "submit"
   },
   submit: function(e) {
     e.preventDefault();
