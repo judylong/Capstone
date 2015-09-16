@@ -2,7 +2,7 @@ module Api
   class ProjectsController < ApiController
     def index
       @projects = Project.all
-      render json: @projects
+      render :index
     end
 
     def create
@@ -16,7 +16,7 @@ module Api
 
     def show
       @project = Project.find(params[:id])
-      render json: @project
+      render :show
     end
 
     private
