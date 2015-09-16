@@ -1,0 +1,9 @@
+Title: <input type=text name="project[title]" value="<%= project.get('title') %>">
+<br>
+Description: <textarea name="project[description]"><%= project.get('description')%></textarea>
+<br>
+Goal: $<input type=text name="project[goal]" value="<%= project.get('goal')%>">
+<br>
+End Date: <input type=date name="project[end_date]" value="<%= project.get('end_date')%>">
+<br>
+<input type="submit" class="submit-project" value="Make Project">

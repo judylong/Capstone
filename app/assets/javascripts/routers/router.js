@@ -2,7 +2,6 @@ Capstone.Routers.Router = Backbone.Router.extend({
   initialize: function(options) {
     this.$rootEl = options.$rootEl;
     this.collection = options.collection;
-    // debugger
   },
 
   routes: {
@@ -18,7 +17,9 @@ Capstone.Routers.Router = Backbone.Router.extend({
   },
 
   new: function() {
-
+    var model = new Capstone.Models.Project();
+    var view = new Capstone.Views.ProjectForm({model: model});
+    this._swapView(view);
   },
 
   show: function(id) {
