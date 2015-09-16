@@ -1,4 +1,4 @@
-Capstone.Views.ProjectsIndex = Backbone.View.extend({
+Capstone.Views.ProjectsIndex = Backbone.CompositeView.extend({
   initialize: function() {
     this.listenTo(this.collection, 'sync', this.render)
   },
