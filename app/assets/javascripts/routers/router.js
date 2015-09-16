@@ -7,7 +7,8 @@ Capstone.Routers.Router = Backbone.Router.extend({
   routes: {
     "":"index",
     "projects/new":"new",
-    "projects/:id":"show"
+    "projects/:id":"showProject",
+    "users/:id":"showUser"
   },
 
   index: function() {
@@ -22,10 +23,20 @@ Capstone.Routers.Router = Backbone.Router.extend({
     this._swapView(view);
   },
 
-  show: function(id) {
+  showProject: function(id) {
     var model = this.collection.getOrFetch(id);
     var view = new Capstone.Views.ProjectShow({model: model});
     this._swapView(view);
+  },
+
+  showUser: function(id) {
+    var model = new Capstone.Models.User({id: id})
+    model.fetch({
+      success: function() {
+        var view = new Capstone.Views.UserShow({model: model});
+        this._swapView(view);
+      }.bind(this)
+    })
   },
 
   _swapView: function(view) {
