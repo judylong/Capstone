@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+div .projects-index-item {
+  border: solid 1px #d9d9de;
+}
