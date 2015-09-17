@@ -1,0 +1,9 @@
+<input type="hidden" name="reward[project_id]" value="reward.escape('project_id')">
+Pledge amount: <input type="text" name="reward[pledge_amount]">
+Description: <textarea name="reward[description]"></textarea>
+Estimated delivery: <input type="date" name="reward[estimated_delivery]"%>
+Limited quantity: <input type="checkbox" class="limit_checkbox">
+  <% if (reward.get('limited')) { %>
+    <input type="text" name="reward[limited_quantity]">
+  <% } %>
+Shipping details: <input type="select" name="reward[shipping_location]" value="">
