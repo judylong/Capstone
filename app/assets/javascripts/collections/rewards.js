@@ -3,7 +3,7 @@ Capstone.Collections.Rewards = Backbone.Collection.extend({
     return this.project.url() + '/rewards'
   },
 
-  model: Capstone.Models.Project,
+  model: Capstone.Models.Reward,
 
   initialize: function(models, options) {
     this.project = options.project;
