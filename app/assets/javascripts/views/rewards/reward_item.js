@@ -4,5 +4,6 @@ Capstone.Views.RewardItem = Backbone.View.extend({
     var content = this.template({reward: this.model});
     this.$el.html(content);
     return this;
-  }
+  },
+  tagName: "li"
 })

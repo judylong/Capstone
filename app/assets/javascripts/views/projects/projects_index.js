@@ -1,9 +1,9 @@
 Capstone.Views.ProjectsIndex = Backbone.CompositeView.extend({
   initialize: function() {
     this.listenTo(this.collection, 'sync', this.render);
-    this.listenTo(this.collection, 'add', this.addProjectsIndexItem)
+    this.listenTo(this.collection, 'add', this.addProjectsIndexItem);
     this.collection.each(this.addProjectsIndexItem.bind(this));
-    this.listenTo(this.collection, 'remove', this.removeProjectsIndexItem)
+    this.listenTo(this.collection, 'remove', this.removeProjectsIndexItem);
   },
   template: JST['projects/index'],
   render: function() {
@@ -17,6 +17,6 @@ Capstone.Views.ProjectsIndex = Backbone.CompositeView.extend({
     this.addSubview('.projects-index', subview);
   },
   removeProjectsIndexItem: function(projectsIndexItem) {
-    this.removeModelSubview('.projects-index', projectsIndexItem)
+    this.removeModelSubview('.projects-index', projectsIndexItem);
   }
 });
