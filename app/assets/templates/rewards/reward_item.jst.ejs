@@ -1,0 +1,14 @@
+<strong>
+  Pledge $<%= project.escape("pledge_amount")%> or more
+</strong>
+
+<p>
+  <%= project.escape("description")%>
+</p>
+<%= project.escape("limited_quantity")%>
+
+<div class="delivery-shipping">
+
+</div>
+<p>Estimated delivery: <%= project.escape("estimated_delivery")%></p>
+<p>Ships to: <%= project.escape("shipping_location")%></p>
