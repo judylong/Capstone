@@ -5,13 +5,32 @@
   </p>
 </section>
 
-<section class="top-section">
-  <p>Goal: $<%= project.escape('goal')%></p>
-  <p>End date: <%= project.escape('end_date')%></p>
+<section class="top-section group">
+  <div class="top-row-1 group">
+    <div class="video">
+
+    </div>
+    <div class="stats">
+      <p>Goal: $<%= project.escape('goal')%></p>
+      <p>End date: <%= project.escape('end_date')%></p>
+    </div>
+  </div>
+  <div class="top-row-2 group">
+    <div class="blurb">
+      <%= project.escape('description')%>
+    </div>
+    <div class="owner-desc">
+      <%= project.escape('owner_name')%>
+    </div>
+  </div>
 </section>
 
-<section class="bottom-section">
-  <p><%= project.escape('full_description')%></p>
+<section class="bottom-section group">
+  <div class="full-description">
+    <h1>About this project</h1>
+    <strong><h1><%= project.escape('full_description')%></h1></strong>
+
+  </div>
   <div class="rewards">
     <p>Rewards</p>
     <ul class="rewards-list">

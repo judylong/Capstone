@@ -27,6 +27,12 @@ html, body, section, article, h1, p, strong, em, a, div {
   background: transparent;
 }
 
+.group:after {
+  content: "";
+  clear: both;
+  display:block;
+}
+
 
 div .projects-index-item {
   border: solid 1px #d9d9de;
@@ -65,4 +71,46 @@ ul.rewards-list li:hover {
 
 strong {
   font-weight: 700;
+}
+
+section.title-section {
+  border: 1px solid red;
+  text-align: center;
+}
+
+section.top-section {
+  border: 1px solid blue;
+}
+
+section.bottom-section {
+  border: 1px solid orange;
+}
+
+div.full-description {
+  border: 1px solid green;
+  float: left;
+}
+
+div.top-row-1 {
+  border: 2px solid purple;
+}
+div.top-row-2 {
+  border: 2px solid yellow;
+}
+
+div.stats {
+  border: 1px solid orange;
+  float:right
+}
+div.video {
+  border: 1px solid orange;
+  float: left
+}
+div.blurb {
+  border: 1px solid red;
+  float:left
+}
+div.owner-desc {
+  border: 1px solid red;
+  float:right
 }
