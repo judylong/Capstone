@@ -13,13 +13,14 @@
  *= require_tree .
  *= require_self
  */
-html, body, section, article, h1, p, strong, em, a {
+html, body, section, article, h1, p, strong, em, a, div {
   margin: 0;
   border: 0;
   padding: 0;
   outline: 0;
 
   font: inherit;
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
   text-decoration: inherit;
   text-align: inherit;
   color: inherit;
@@ -34,4 +35,34 @@ div .projects-index-item {
   margin-right: 20px;
   margin-bottom: 20px;
   border-radius: 6px;
+}
+
+div.rewards {
+  border: solid 1px black;
+  float: right;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+ul.rewards-list {
+  list-style: none;
+  padding: 0;
+}
+
+ul.rewards-list li {
+  border: solid 1px #d9d9de;
+  width: 320px;
+  margin: 10px;
+  padding: 20px;
+  background: #f7fafa;
+}
+
+ul.rewards-list li:hover {
+  border-radius: 6px;
+  background: green;
+  color: #d9d9de;
+}
+
+strong {
+  font-weight: 700;
 }
