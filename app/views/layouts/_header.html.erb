@@ -1,0 +1,21 @@
+<header class="header group">
+  <div class="header-logo">
+    <h1>TBD Logo</h1>
+  </div>
+  <nav class="primary-nav">
+    <ul class="primary-nav-list group">
+      <li><a href="/#projects/new">Start</a></li>
+      <li><a href="/#">Discover</a></li>
+    </ul>
+  </nav>
+  <nav class="user-nav">
+    <ul class="user-nav-list">
+      <% if logged_in? %>
+        <li><%= link_to "Log out", session_url, method: :delete %></li>
+      <% else %>
+        <li><a href="<%= new_user_path %>">Sign Up</a></li>
+        <li><a href="<%= new_session_path %>">Log in</a></li>
+      <% end %>
+    </ul>
+  </nav>
+</header>

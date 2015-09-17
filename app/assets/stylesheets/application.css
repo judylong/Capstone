@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-html, body, section, article, h1, p, strong, em, a, div {
+html, body, header, nav, section, article, h1, p, strong, em, a, ul, div {
   margin: 0;
   border: 0;
   padding: 0;
@@ -25,6 +25,10 @@ html, body, section, article, h1, p, strong, em, a, div {
   text-align: inherit;
   color: inherit;
   background: transparent;
+}
+
+ul {
+  list-style: none;
 }
 
 .group:after {
@@ -51,7 +55,6 @@ div.rewards {
 }
 
 ul.rewards-list {
-  list-style: none;
   padding: 0;
 }
 
@@ -73,13 +76,14 @@ strong {
   font-weight: 700;
 }
 
-section.title-section {
+div.title-section {
   border: 1px solid red;
   text-align: center;
 }
 
 section.top-section {
   border: 1px solid blue;
+  background: #f7fafa;
 }
 
 section.bottom-section {
@@ -113,4 +117,35 @@ div.blurb {
 div.owner-desc {
   border: 1px solid red;
   float:right
+}
+
+header {
+  border: 1px solid black;
+}
+
+ul.header-list li {
+  float: left
+}
+
+header li {
+  float:left;
+  padding: 20px 15px 20px 15px;
+}
+
+nav.primary-nav {
+  float:left;
+  border-right: solid 1px #d9d9de
+}
+
+nav.user-nav {
+  float:right
+
+}
+
+h1.header-logo {
+  float:left;
+}
+
+div.header-logo {
+  float:left;
 }
