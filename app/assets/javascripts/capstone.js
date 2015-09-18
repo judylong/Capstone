@@ -4,11 +4,13 @@ window.Capstone = {
   Views: {},
   Routers: {},
   initialize: function() {
-    var projects = new Capstone.Collections.Projects();
-    new Capstone.Routers.Router({
-      $rootEl: $("#main"),
-      collection: projects
-    })
+    Capstone.Collections.projects = new Capstone.Collections.Projects();
+    this.currentUser = new Capstone.Models.CurrentUser();
+    this.currentUser.fetch();
+
+    this.header = new Capstone.Views.Header({el: "#header"});
+    this.header.render();
+    this.router = new Capstone.Routers.Users({$rootEl: $("#main")})
     Backbone.history.start();
   }
 };
