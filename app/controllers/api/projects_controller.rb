@@ -1,5 +1,6 @@
 module Api
   class ProjectsController < ApiController
+    wrap_parameters false
     def index
       @projects = Project.all
       render :index
@@ -26,7 +27,8 @@ module Api
                                       :goal,
                                       :end_date,
                                       :owner_id,
-                                      :category_id)
+                                      :category_id,
+                                      :image)
     end
   end
 end
