@@ -1,15 +1,56 @@
 <input type="hidden" name="project[category_id]" value="1">
 <input type="hidden" name="owner_id" value="<%= project.get('owner_id')%>">
-Title: <input type=text name="project[title]" value="<%= project.get('title') %>">
-<br>
-Description: <textarea name="project[description]"><%= project.get('description')%></textarea>
-<br>
-Goal: $<input type=text name="project[goal]" value="<%= project.get('goal')%>">
-<br>
-End Date: <input type=date name="project[end_date]" value="<%= project.get('end_date')%>">
-<br>
 
-<ul class="rewards-form-list">
+
+<ul class="project-inputs group">
+  <li class="project-image group">
+    <label>Project Image</label>
+  </li>
+
+  <li class="project-title group">
+    <label>Title</label>
+    <div class="project-title-right">
+      <div class="project-title-input">
+        <input type=text name="project[title]" value="<%= project.get('title') %>">
+      </div>
+        <p>
+          Your project title and blurb should be simple, specific, and memorable. Our search tools run through these sections of your project, so be sure to incorporate any key words here!
+        </p>
+        <p>
+          These words will help people find your project, so choose them wisely! Your name will be searchable too.
+        </p>
+    </div>
+  </li>
+
+  <li class="project-description group">
+    <label>Short Blurb</label>
+    <div class="project-description-right">
+      <div class="project-description-input">
+        <textarea name="project[description]"><%= project.get('description')%></textarea>
+      </div>
+    <p>
+      If you had to describe what you're creating in one tweet, how would you do it?
+    </p>
+    </div>
+  </li>
+
+  <li class="project-duration group">
+    <label>Funding duration</label>
+    <input type=date name="project[end_date]" value="<%= project.get('end_date')%>">
+  </li>
+
+  <li class="project-goal group">
+    <label>Funding Goal</label>
+    <input type=text name="project[goal]" value="<%= project.get('goal')%>">
+  </li>
 
 </ul>
+
+
+
+
+<div class="rewards-form-list group">
+
+</div>
+<button class="add-reward-form">+ Add a reward</button>
 <button class="submit-project">Make Project</button>

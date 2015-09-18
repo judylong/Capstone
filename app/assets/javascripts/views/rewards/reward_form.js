@@ -4,5 +4,7 @@ Capstone.Views.RewardForm = Backbone.View.extend({
     var content = this.template({reward: this.model});
     this.$el.html(content);
     return this;
-  }
+  },
+  tagName: "form",
+  className: "reward-form group"
 })

@@ -3,11 +3,8 @@ Capstone.Views.ProjectForm = Backbone.CompositeView.extend({
   tagName: "form",
   initialize: function() {
     this.listenTo(this.model, "sync", this.render);
-
-    var newReward = Capstone.Models.Reward({project: this})
-
-    this.addRewardForm(new Capstone.Views.RewardForm({model: new }))
-  }
+    this.addRewardForm()
+  },
   render: function() {
     var content = this.template({project: this.model});
     this.$el.html(content);
@@ -15,11 +12,12 @@ Capstone.Views.ProjectForm = Backbone.CompositeView.extend({
     return this;
   },
   events: {
-    "click button.submit-project": "submit"
+    "click button.submit-project": "submit",
     "click button.add-reward-form": "addRewardForm"
   },
-  addRewardForm: function(rewardForm) {
-    var subview = new Capstone.Views.RewardForm({model: reward});
+  addRewardForm: function() {
+    var newReward = new Capstone.Models.Reward({project: this.model});
+    var subview = new Capstone.Views.RewardForm({model: newReward});
     this.addSubview('.rewards-form-list', subview);
   },
   removeRewardForm: function(rewardForm) {

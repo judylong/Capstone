@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-html, body, header, nav, section, article, h1, p, strong, em, a, ul, div {
+html, body, header, nav, section, article, h1, p, strong, em, a, ul, div, input, textarea {
   margin: 0;
   border: 0;
   padding: 0;
@@ -148,4 +148,142 @@ h1.header-logo {
 
 div.header-logo {
   float:left;
+}
+
+div.rewards-form-list {
+  /*border: solid 1px red;*/
+}
+
+div.reward-table {
+  width: 450px;
+  margin: auto;
+  background: rgb(242, 242, 243);
+  border: solid 1px #d9d9de;
+  border-radius: 3px;
+}
+
+div.reward-table label {
+  float: left;
+  /*border: solid 1px orange;*/
+  width: 120px;
+  font-size: 12px;
+  padding: 10px;
+}
+
+div.reward-table > div {
+  border-bottom: 1px solid #d9d9de;
+}
+
+div.reward-table {
+  float: right;
+  width: 450px;
+}
+
+div.reward-table > div.reward-limited-checkbox {
+  border-bottom: 0px;
+}
+
+div.rewards-form-list {
+  width: 640px;
+  margin: auto;
+}
+
+form.reward-form {
+  /*border: 1px solid red;*/
+  padding: 10px;
+  background: #f7fafa;
+  margin-bottom: 10px;
+}
+
+div.reward-table input {
+  background: white;
+  border-left: solid 1px #d9d9de;
+  width: 200px;
+  padding: 10px;
+}
+
+div.reward-pledge-amt > input {
+  width: 99px;
+  border-right: 1px solid #d9d9de;
+}
+
+div.reward-table textarea {
+  width: 289px;
+  background: white;
+  resize: none;
+  border-left: solid 1px #d9d9de;
+  float:right;
+  padding: 10px;
+}
+
+ul.project-inputs {
+  margin: 10px auto;
+  width: 620px;
+  padding: 20px;
+  border: solid 1px #d9d9de;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+ul.project-inputs li {
+  background: #f7fafa;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  padding: 4px;
+}
+
+label {
+  font-weight: 700;
+}
+
+ul.project-inputs input {
+  border: solid 1px #d9d9de;
+  float: right;
+  border-radius: 3px;
+  width: 450px;
+  padding: 5px;
+}
+
+div.project-description-right {
+  float: right;
+}
+
+div.project-title-right {
+  float:right;
+}
+
+ul.project-inputs label {
+  float: left;
+  /*border: solid 1px orange;*/
+  width: 120px;
+  font-size: 12px;
+  padding: 10px;
+}
+
+/*ul.project-inputs * {
+  border: solid 1px orange;
+}*/
+
+ul.project-inputs p {
+  width: 400px;
+  padding: 5px 10px;
+  /*border: solid 1px black;*/
+}
+
+ul.project-inputs textarea {
+  width: 289px;
+  background: white;
+  resize: none;
+  border: solid 1px #d9d9de;
+  border-radius: 3px;
+  float:right;
+  padding: 10px;
+  width: 400px;
+}
+
+ul.project-inputs input {
+  background: white;
+  border: solid 1px #d9d9de;
+  width: 400px;
+  padding: 10px;
 }
