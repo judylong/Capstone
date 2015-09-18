@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-html, body, header, nav, section, article, h1, p, strong, em, a, ul, div, input, textarea {
+html, body, header, nav, section, article, h1, p, strong, em, a, ul, div, input, textarea, select {
   margin: 0;
   border: 0;
   padding: 0;
@@ -278,5 +278,12 @@ ul.project-inputs input {
   background: white;
   border: solid 1px #d9d9de;
   width: 400px;
+  padding: 10px;
+}
+
+select.category-drop-down {
+  background: white;
+  border: solid 1px #d9d9de;
+  width: 420px;
   padding: 10px;
 }

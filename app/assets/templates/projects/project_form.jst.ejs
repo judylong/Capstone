@@ -4,11 +4,11 @@
 
 <ul class="project-inputs group">
   <li class="project-image group">
-    <label>Project Image</label>
+    <label>Project image</label>
   </li>
 
   <li class="project-title group">
-    <label>Title</label>
+    <label>Project title</label>
     <div class="inputs-right">
         <input type=text name="project[title]" value="<%= project.get('title') %>">
         <p>
@@ -27,6 +27,18 @@
       <p>
         If you had to describe what you're creating in one tweet, how would you do it?
       </p>
+    </div>
+  </li>
+
+  <li class="project-category group">
+    <label>Category</label>
+      <div class="inputs-right">
+        <select class="category-drop-down">
+          <option value="category1">Category 1</option>
+          <option value="category2">Category 2</option>
+          <option value="category3">Category 3</option>
+        </select>
+      </div>
     </div>
   </li>
 
