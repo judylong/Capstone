@@ -21,8 +21,8 @@ Capstone.Models.CurrentUser = Capstone.Models.User.extend({
   logIn: function(options) {
     var model = this;
     var credentials = {
-      "user[email]" = options.email,
-      "user[password]" = options.password
+      "user[email]": options.email,
+      "user[password]": options.password
     };
 
     $.ajax({
@@ -52,7 +52,7 @@ Capstone.Models.CurrentUser = Capstone.Models.User.extend({
         options.success && options.success();
       }
     });
-  }.
+  },
 
   fireSessionEvent: function() {
     if (this.isLoggedIn()){
