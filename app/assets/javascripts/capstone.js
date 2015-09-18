@@ -9,7 +9,6 @@ window.Capstone = {
     this.currentUser.fetch();
 
     this.header = new Capstone.Views.Header({el: "#header"});
-    this.header.render();
     this.router = new Capstone.Routers.Users({$rootEl: $("#main")})
     Backbone.history.start();
   }

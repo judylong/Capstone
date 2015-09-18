@@ -1,6 +1,7 @@
 Capstone.Views.Header = Backbone.View.extend({
   initialize: function(options) {
     this.listenTo(Capstone.currentUser, "logIn logOut", this.render);
+    this.render();
   },
 
   events: {

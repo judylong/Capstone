@@ -9,9 +9,9 @@
     </ul>
   </nav>
   <nav class="user-nav">
-    <ul class="user-nav-list">
-      <% if(Capstone.currentUser.isLoggedIn()) { %>
-        <li><a href="#" id="log-out-link">Log out</li>
+    <ul class="user-nav-list group">
+      <% if(currentUser.isLoggedIn()) { %>
+        <li><a href="#" id="log-out-link">Log out</a></li>
       <% } else { %>
         <li><a href="#users/new">Sign Up</a></li>
         <li><a href="#session/new">Log in</a></li>
