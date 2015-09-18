@@ -212,7 +212,6 @@ div.reward-table textarea {
   background: white;
   resize: none;
   border-left: solid 1px #d9d9de;
-  float:right;
   padding: 10px;
 }
 
@@ -238,18 +237,13 @@ label {
 
 ul.project-inputs input {
   border: solid 1px #d9d9de;
-  float: right;
   border-radius: 3px;
   width: 450px;
   padding: 5px;
 }
 
-div.project-description-right {
+div.inputs-right {
   float: right;
-}
-
-div.project-title-right {
-  float:right;
 }
 
 ul.project-inputs label {
@@ -276,7 +270,6 @@ ul.project-inputs textarea {
   resize: none;
   border: solid 1px #d9d9de;
   border-radius: 3px;
-  float:right;
   padding: 10px;
   width: 400px;
 }

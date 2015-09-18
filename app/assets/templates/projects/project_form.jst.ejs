@@ -9,10 +9,8 @@
 
   <li class="project-title group">
     <label>Title</label>
-    <div class="project-title-right">
-      <div class="project-title-input">
+    <div class="inputs-right">
         <input type=text name="project[title]" value="<%= project.get('title') %>">
-      </div>
         <p>
           Your project title and blurb should be simple, specific, and memorable. Our search tools run through these sections of your project, so be sure to incorporate any key words here!
         </p>
@@ -24,24 +22,26 @@
 
   <li class="project-description group">
     <label>Short Blurb</label>
-    <div class="project-description-right">
-      <div class="project-description-input">
-        <textarea name="project[description]"><%= project.get('description')%></textarea>
-      </div>
-    <p>
-      If you had to describe what you're creating in one tweet, how would you do it?
-    </p>
+    <div class="inputs-right">
+      <textarea name="project[description]"><%= project.get('description')%></textarea>
+      <p>
+        If you had to describe what you're creating in one tweet, how would you do it?
+      </p>
     </div>
   </li>
 
   <li class="project-duration group">
     <label>Funding duration</label>
-    <input type=date name="project[end_date]" value="<%= project.get('end_date')%>">
+    <div class="inputs-right">
+      <input type=date name="project[end_date]" value="<%= project.get('end_date')%>">
+    </div>
   </li>
 
   <li class="project-goal group">
     <label>Funding Goal</label>
-    <input type=text name="project[goal]" value="<%= project.get('goal')%>">
+    <div class="inputs-right">
+      <input type=text name="project[goal]" value="<%= project.get('goal')%>">
+    </div>
   </li>
 
 </ul>
