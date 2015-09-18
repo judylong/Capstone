@@ -1,5 +1,7 @@
 class Project < ActiveRecord::Base
   # validates :goal, format: { with: /^[0-9]+$/, on: :create}
+  has_attached_file :image, default_url: "missing.png"
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   belongs_to :owner,
     class_name: "User",
