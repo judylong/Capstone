@@ -287,3 +287,15 @@ select.category-drop-down {
   width: 420px;
   padding: 10px;
 }
+
+
+div.proj-img-div {
+  border: 1px dashed #d9d9de;
+  border-radius: 3px;
+  background: white;
+  width: 420px
+}
+
+#input-project-image {
+  border: none;
+}
