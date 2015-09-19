@@ -11,6 +11,8 @@ Capstone.Views.UsersForm = Backbone.View.extend({
     return this;
   },
 
+  className: "signlog-div",
+
   events: {
     "submit form":"submit"
   },

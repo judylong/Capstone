@@ -299,3 +299,55 @@ div.proj-img-div {
 #input-project-image {
   border: none;
 }
+
+div.signlog-div {
+  border: solid 1px #d9d9de;
+  border-radius: 6px;
+  width: 400px;
+  margin: 60px auto 20px; auto;
+  padding: 20px;
+  font-weight: normal;
+}
+
+div.signlog-div h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+div.signlog-div input {
+  border: solid 1px #d9d9de;
+  border-radius: 6px;
+  padding: 10px;
+  width: 380px;
+}
+
+div.signlog-div button {
+  border: solid 1px #d9d9de;
+  border-radius: 6px;
+  background: rgb(42, 219, 113);
+  color: white;
+  font-weight: 500;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+}
+
+div.signlog-div ul {
+}
+
+div.signlog-div li {
+  margin-bottom: 20px;
+}
+
+nav {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+nav.user-nav {
+  color: rgb(0, 160, 255);
+}
+
+nav.primary-nav {
+  color: rgb(130, 133, 135);
+}

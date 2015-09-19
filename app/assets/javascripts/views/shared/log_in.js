@@ -12,6 +12,8 @@ Capstone.Views.LogIn = Backbone.View.extend({
     return this;
   },
 
+  className: "signlog-div",
+
   events: {
     "submit form":"submit"
   },
