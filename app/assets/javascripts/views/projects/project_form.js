@@ -34,9 +34,9 @@ Capstone.Views.ProjectForm = Backbone.CompositeView.extend({
 
   submit: function(e) {
     e.preventDefault();
-
-    var title = this.$("#input-project-image-title").val();
-    var file = this.$("input-project-image")[0].files[0];
+    debugger
+    var title = this.$("#input-project").val();
+    var file = this.$("#input-project-image")[0].files[0];
 
     var formData = new FormData();
     formData.append("project[title]", title);

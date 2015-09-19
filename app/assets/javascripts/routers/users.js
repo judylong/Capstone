@@ -21,6 +21,8 @@ Capstone.Routers.Users = Backbone.Router.extend({
   },
 
   newProject: function() {
+    var callback = this.newProject.bind(this);
+    if(!this._requireLoggedIn(callback)) { return; }
     var model = new Capstone.Models.Project();
     var view = new Capstone.Views.ProjectForm({model: model, collection: Capstone.Collections.projects});
     this._swapView(view);
