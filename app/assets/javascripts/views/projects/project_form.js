@@ -23,8 +23,7 @@ Capstone.Views.ProjectForm = Backbone.CompositeView.extend({
     if (e) {
       e.preventDefault();
     }
-    var newReward = new Capstone.Models.Reward({project: this.model});
-    var subview = new Capstone.Views.RewardForm({model: newReward});
+    var subview = new Capstone.Views.RewardForm({project: this.model});
     this.addSubview('.rewards-form-list', subview);
   },
 
@@ -34,12 +33,12 @@ Capstone.Views.ProjectForm = Backbone.CompositeView.extend({
 
   submit: function(e) {
     e.preventDefault();
-    debugger
-    var title = this.$("#input-project").val();
+
     var file = this.$("#input-project-image")[0].files[0];
 
-    var formData = new FormData();
-    formData.append("project[title]", title);
+    var formEl = this.$el[0];
+    var formData = new FormData(formEl);
+    debugger
     formData.append("project[image]", file);
 
     this.model.saveFormData(formData, {
