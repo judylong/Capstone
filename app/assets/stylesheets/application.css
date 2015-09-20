@@ -37,14 +37,21 @@ ul {
   display:block;
 }
 
+div.projects-index {
+  width: 1080px;
+  margin: 50px auto;
+}
 
-div .projects-index-item {
+div.projects-index-item {
   border: solid 1px #d9d9de;
   float: left;
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 20px;
   border-radius: 6px;
+  height: 416px;
+  width: 210px;
+  position: relative;
 }
 
 div.rewards {
@@ -350,4 +357,60 @@ nav.user-nav {
 
 nav.primary-nav {
   color: rgb(130, 133, 135);
+}
+
+div.projects-index-item img {
+  display: block;
+  margin: auto;
+  height: 165px;
+}
+
+div.projects-index-item div {
+  padding: 10px;
+  color: rgb(130, 133, 135);
+    font-size: 12px;
+}
+
+div.projects-index-item h1 {
+  font-weight: bold;
+  color: black;
+}
+
+div.brief-stats {
+  position: absolute;
+  bottom: 0;
+}
+
+div.brief-stats li {
+  float: left;
+  margin-right: 5px;
+}
+
+input.hideMe {
+  display: none;
+}
+
+div.reward-limited-checkbox {
+  height: 55px;
+  /*float: left;*/
+}
+
+/*
+#checkbox {
+  width: 20px;
+  position: absolute;
+  margin: 10px auto auto 10px;
+}*/
+
+#checktext {
+  width: 50px;
+  height: 24px;
+  margin-left: 50px;
+  border: 1px solid #d9d9de;
+  position: relative;
+}
+
+
+div.reward-limited-checkbox label {
+  position: relative;
 }
