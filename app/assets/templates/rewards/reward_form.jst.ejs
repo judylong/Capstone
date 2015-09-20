@@ -1,34 +1,33 @@
-<input type="hidden" name="reward[project_id]" value="reward.escape('project_id')">
 <div class="reward-table">
 
 <div class="reward-pledge-amt group">
   <label>Pledge amount</label>
-  <input type="text" name="reward[pledge_amount]">
+  <input type="text" name="project[rewards][][pledge_amount]">
 </div>
 
 <div class="reward-description group">
   <label>Description</label>
-  <textarea name="reward[description]"></textarea>
+  <textarea name="project[rewards][][description]"></textarea>
 </div>
 
 <div class="reward-estimated-delivery group">
   <label>Estimated delivery</label>
-  <input type="date" name="reward[estimated_delivery]"%>
+  <input type="date" name="project[rewards][][estimated_delivery]"%>
 </div>
 
 <div class="reward-shipping-details group">
   <label>Shipping details</label>
-  <input type="select" name="reward[shipping_location]" value="">
+  <input type="select" name="project[rewards][][shipping_location]" value="">
 </div>
 
 <div class="reward-limited-checkbox group">
-  <div class="reward-limited-quanitiy">
+
+  <input type="checkbox" id="checkbox" class="limit_checkbox">
   <label>Limit quantity</label>
-  <input type="checkbox" class="limit_checkbox">
-    <% if (reward.get('limited')) { %>
-      <input type="text" name="reward[limited_quantity]">
-    <% } %>
-  </div>
+  <input type="text" id="checktext" class="hideMe" name="project[rewards][][limited_quantity]">
+
+</div>
+
 </div>
 
 

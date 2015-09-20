@@ -8,6 +8,10 @@ module Api
 
     def create
       @project = current_user.projects.new(project_params)
+      rewards_params[:rewards].each do |reward_params|
+        @project.rewards.new(reward_params)
+      end
+
       if @project.save
         render json: @project
       else
@@ -29,6 +33,15 @@ module Api
                                       :owner_id,
                                       :category_id,
                                       :image)
+    end
+
+    def rewards_params
+      params.require(:project).permit(:rewards => [:project_id,
+                    :description,
+                    :pledge_amount,
+                    :limited_quantity,
+                    :shipping_location,
+                    :estimated_delivery])
     end
   end
 end
