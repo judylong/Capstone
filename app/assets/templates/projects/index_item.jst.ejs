@@ -1,4 +1,28 @@
-<a href="#projects/<%=project.escape('id')%>">Title: <%= project.escape('title') %></a>
-<p>Description: <%= project.escape('description')%></p>
-<p>Goal: $<%= project.escape('goal')%></p>
-<p>End date: <%= project.escape('end_date')%></p>
+<a href="#projects/<%=project.escape('id')%>"><img src="<%= project.escape('image_url') %>"></a>
+<div class="brief-info">
+  <h1><a href="#projects/<%=project.escape('id')%>"><%= project.escape('title') %></a></h1>
+  <p><%= project.escape('owner_name')%></p>
+  <br>
+  <p>Blurb: <%= project.escape('description')%></p>
+</div>
+<div class="brief-stats group">
+  <ul>
+    <li>
+      <h1>%</h1>
+      <p>funded</p>
+    </li>
+
+    <li>
+      <h1>$</h1>
+      <p>pledged</p>
+    </li>
+
+    <li>
+      <h1>#</h1>
+      <p>days to go</p>
+    </li>
+
+  </ul>
+  <!-- <p>Goal: $<%= project.escape('goal')%></p>
+  <p>End date: <%= project.escape('end_date')%></p> -->
+</div>

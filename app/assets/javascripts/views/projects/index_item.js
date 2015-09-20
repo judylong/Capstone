@@ -3,7 +3,7 @@ Capstone.Views.ProjectsIndexItem = Backbone.View.extend({
     // this.listenTo(this.model, 'sync', this.render)
   },
   template: JST['projects/index_item'],
-  className: "projects-index-item",
+  className: "projects-index-item group",
   render: function() {
     var content = this.template({project: this.model});
     this.$el.append(content);
