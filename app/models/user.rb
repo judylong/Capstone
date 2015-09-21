@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
 
   has_many :backed_rewards, through: :rewardings, source: :reward
 
-
+  has_many :backed_projects, through: :backed_rewards, source: :project
 
 
   has_attached_file :avatar, styles: { medium: "220x220>", thumb: "160x160>", default_url: "/images/:style/missing.png"}, default_url: "missing.png"

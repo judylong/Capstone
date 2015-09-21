@@ -10,4 +10,6 @@ class Project < ActiveRecord::Base
   belongs_to :category
 
   has_many :rewards
+
+  has_many :project_backers, through: :rewards, source: :reward_backers
 end
