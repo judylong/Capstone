@@ -14,6 +14,21 @@ Capstone.Models.CurrentUser = Capstone.Models.User.extend({
     this.listenTo(this, "change", this.fireSessionEvent);
   },
 
+  backed_projects: function() {
+    if (!this._backed_projects) {
+      this._backed_projects = new Capstone.Collections.Projects();
+    }
+    return this._backed_projects
+  },
+
+  parse: function(response) {
+    if (response.backed_projects) {
+      this.backed_projects().set(response.backed_projects);
+      delete response.backed_projects;
+    }
+    return response;
+  },
+
   isLoggedIn: function() {
     return !this.isNew();
   },
@@ -60,7 +75,7 @@ Capstone.Models.CurrentUser = Capstone.Models.User.extend({
       console.log("currentUser is signed in!", this);
     } else {
       this.trigger("logOut");
-      console.log("currentUser is signed out!")
+      console.log("currentUser is signed out!", this);
     }
   }
 });
