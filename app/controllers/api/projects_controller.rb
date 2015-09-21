@@ -2,7 +2,7 @@ module Api
   class ProjectsController < ApiController
     wrap_parameters false
     def index
-      @projects = Project.all
+      @projects = Project.all.includes(:rewards, :owner, :project_backers)
       render :index
     end
 
