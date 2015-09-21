@@ -10,6 +10,15 @@ class User < ActiveRecord::Base
     class_name: "Project",
     foreign_key: "owner_id"
 
+  has_many :rewardings,
+          class_name: "Rewarding",
+          foreign_key: :backer_id
+
+  has_many :backed_rewards, through: :rewardings, source: :reward
+
+
+
+
   has_attached_file :avatar, styles: { medium: "220x220>", thumb: "160x160>", default_url: "/images/:style/missing.png"}, default_url: "missing.png"
   validates_attachment_content_type :avatar, content_type: /\Aimage\.*\Z/
 
