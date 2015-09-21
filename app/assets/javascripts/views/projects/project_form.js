@@ -38,7 +38,6 @@ Capstone.Views.ProjectForm = Backbone.CompositeView.extend({
 
     var formEl = this.$el[0];
     var formData = new FormData(formEl);
-    debugger
     formData.append("project[image]", file);
 
     this.model.saveFormData(formData, {
