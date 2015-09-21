@@ -414,3 +414,8 @@ div.reward-limited-checkbox {
 div.reward-limited-checkbox label {
   position: relative;
 }
+
+
+li.become-backer {
+  cursor: pointer;
+}

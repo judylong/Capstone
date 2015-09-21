@@ -1,7 +1,11 @@
 <strong>
   Pledge $<%= reward.escape("pledge_amount")%> or more
 </strong>
-
+<br>
+<strong>
+  * <%= reward.escape("num_reward_backers") %> backers
+</strong>
+<br>
 <p>
   <%= reward.escape("description")%>
 </p>
@@ -9,6 +13,15 @@
 
 <div class="delivery-shipping">
 
+    <p>
+      Estimated delivery: <%= reward.escape("estimated_delivery")%>
+    </p>
+
+
+
+    <p>
+      Ships to: <%= reward.escape("shipping_location")%>
+    </p>
 </div>
-<p>Estimated delivery: <%= reward.escape("estimated_delivery")%></p>
-<p>Ships to: <%= reward.escape("shipping_location")%></p>
+
+<button class="become-backer"></button>

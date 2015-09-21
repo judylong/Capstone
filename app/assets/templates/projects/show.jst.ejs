@@ -11,8 +11,17 @@
 
     </div>
     <div class="stats">
-      <p>Goal: $<%= project.escape('goal')%></p>
-      <p>End date: <%= project.escape('end_date')%></p>
+      <strong><%= project.escape('num_project_backers')%></strong>
+      <br>
+      <label>backers</label>
+
+      <strong></strong>
+      <br>
+      <label>Goal: $<%= project.escape('goal')%></label>
+
+      <strong></strong>
+      <br>
+      <label>End date: <%= project.escape('end_date')%></label>
     </div>
   </div>
   <div class="top-row-2 group">
