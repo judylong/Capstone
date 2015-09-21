@@ -300,7 +300,7 @@ div.proj-img-div {
   border: 1px dashed #d9d9de;
   border-radius: 3px;
   background: white;
-  width: 420px
+  width: 420px;
 }
 
 #input-project-image {
@@ -311,7 +311,7 @@ div.signlog-div {
   border: solid 1px #d9d9de;
   border-radius: 6px;
   width: 400px;
-  margin: 60px auto 20px; 
+  margin: 60px auto 20px;
   padding: 20px;
   font-weight: normal;
 }
@@ -365,10 +365,14 @@ div.projects-index-item img {
   height: 165px;
 }
 
+div.projects-index-item {
+  overflow: hidden;
+}
+
 div.projects-index-item div {
   padding: 10px;
   color: rgb(130, 133, 135);
-    font-size: 12px;
+  font-size: 12px;
 }
 
 div.projects-index-item h1 {

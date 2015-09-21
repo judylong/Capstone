@@ -1,9 +1,9 @@
 module Api
   class RewardsController < ApiController
     def create
-      @reward = Reward.new(reward_params)
+      @reward = Reward.new(reward_params).includes(:reward_backers)
       if @reward.save
-        render json: @reward
+        render :show
       else
         render json: @reward.errors.full_messages, status: :unprocessable_entity
       end
@@ -11,7 +11,7 @@ module Api
 
     def show
       @reward = Reward.find(params[:id])
-      render json: @reward
+      render :show
     end
 
     private
