@@ -13,9 +13,6 @@ Capstone.Views.RewardItem = Backbone.View.extend({
 
   becomeBacker: function(e) {
     e.preventDefault();
-    // debugger
-    // var callback = this.becomeBacker.bind(this);
-    // if(!this._requireLoggedIn(callback)) { return; }
 
     if(!Capstone.currentUser.isLoggedIn()) {
       Backbone.history.navigate("session/new", {trigger: true});
@@ -27,7 +24,6 @@ Capstone.Views.RewardItem = Backbone.View.extend({
       success: function() {
         Capstone.currentUser.backed_projects().add(new Capstone.Models.Project({id: this.model.attributes.project_id}))
         this.model.set({num_reward_backers: this.model.attributes.num_reward_backers + 1});
-        debugger
         this.render();
       }.bind(this),
       error: function() {
