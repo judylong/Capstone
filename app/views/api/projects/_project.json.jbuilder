@@ -2,3 +2,4 @@ json.extract! project, :title, :description, :goal, :end_date, :owner_id, :categ
 json.owner_name project.owner.email
 json.rewards project.rewards, partial: 'api/rewards/reward', as: :reward
 json.image_url asset_path(project.image.url(:original))
+json.project_backers project.project_backers.length
