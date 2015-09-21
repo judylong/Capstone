@@ -8,10 +8,11 @@ Capstone.Views.RewardItem = Backbone.View.extend({
   tagName: "li",
   className: "become-backer",
   events: {
-    "click button.become-backer":"becomeBacker"
+    "click":"becomeBacker"
   },
 
   becomeBacker: function(e) {
+    debugger
     e.preventDefault();
     // debugger
     // var callback = this.becomeBacker.bind(this);
