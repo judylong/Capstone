@@ -11,7 +11,8 @@ Capstone.Routers.Users = Backbone.Router.extend({
     "projects/:id":"showProject",
     "users/new":"newUser",
     "users/:id":"showUser",
-    "session/new":"logIn"
+    "session/new":"logIn",
+    "_=_":"index"
   },
 
   index: function() {

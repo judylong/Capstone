@@ -8,4 +8,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :show, :destroy]
     resources :rewardings, only: [:create]
   end
+
+  get "/auth/:provider/callback", to: "api/sessions#omniauth"
+
 end

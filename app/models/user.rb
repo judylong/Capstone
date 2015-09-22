@@ -37,6 +37,21 @@ class User < ActiveRecord::Base
     end
   end
 
+  def self.find_or_create_by_auth_hash(auth_hash)
+    user = User.find_by(
+            provider: auth_hash[:provider],
+            uid: auth_hash[:uid])
+    unless user
+      user = User.create!(
+            provider: auth_hash[:provider],
+            uid: auth_hash[:uid],
+            name: auth_hash[:info][:name],
+            password: SecureRandom::urlsafe_base64,
+            email: SecureRandom::urlsafe_base64+"faker@email.com")
+    end
+    user
+  end
+
   def self.generate_session_token
     SecureRandom::urlsafe_base64
   end
