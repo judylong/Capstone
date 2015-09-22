@@ -11,16 +11,15 @@
 
     </div>
     <div class="stats">
-      <h1>#</h1>
-      <strong><%= project.escape('num_project_backers')%></strong>
+      <h1><%= project.escape('num_project_backers')%></h1>
       <label>backers</label>
       <br>
       <br>
-      <h1>$</h1>
+      <h1>$<%= project.escape('amt_funded')%></h1>
       <strong>pledged of $<%= project.escape('goal')%> goal</strong>
       <br>
       <br>
-      <h1>#</h1>
+      <h1><%= project.escape('time_left')%></h1>
       <strong>days to go</strong>
       <br>
       <label>(End date: <%= project.escape('end_date')%>)</label>
