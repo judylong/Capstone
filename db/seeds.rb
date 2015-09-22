@@ -1,5 +1,5 @@
-u1 = User.create(email: 'one@example.com', password: 'password')
-u2 = User.create(email: 'two@example.com', password: 'password')
+u1 = User.create(email: 'one@example.com', password: 'password', name: "User1")
+u2 = User.create(email: 'two@example.com', password: 'password', name: "User2")
 
 p1 = Project.create(title: 'project1',
                     description: 'my first project',
