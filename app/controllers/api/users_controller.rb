@@ -22,7 +22,7 @@ module Api
 
     protected
     def user_params
-      params.require(:user).permit(:email, :password, :email_confirmation, :password_confirmation)
+      params.require(:user).permit(:email, :password, :email_confirmation, :password_confirmation, :name)
     end
   end
 end
