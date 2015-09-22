@@ -8,17 +8,17 @@
 <div class="brief-stats group">
   <ul>
     <li>
-      <h1>%</h1>
+      <h1><%= project.escape('amt_funded')/project.escape('goal') %>%</h1>
       <p>funded</p>
     </li>
 
     <li>
-      <h1>$</h1>
+      <h1>$<%= project.escape('amt_funded')%></h1>
       <p>pledged</p>
     </li>
 
     <li>
-      <h1>#</h1>
+      <h1><%= project.escape('time_left')%></h1>
       <p>days to go</p>
     </li>
 

@@ -2,7 +2,7 @@ module Api
   class ProjectsController < ApiController
     wrap_parameters false
     def index
-      @projects = Project.includes(:rewards, :owner, :project_backers).all
+      @projects = Project.includes(:rewards, :owner, :project_backed_rewards).all
       render :index
     end
 
@@ -20,7 +20,7 @@ module Api
     end
 
     def show
-      @project = Project.includes(:project_backers).find(params[:id])
+      @project = Project.includes(:project_backers, :project_backers, :project_backed_rewards).find(params[:id])
       render :show
     end
 

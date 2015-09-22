@@ -6,6 +6,7 @@ Capstone.Views.ProjectShow = Backbone.CompositeView.extend({
     this.listenTo(this.model.rewards(), "add", this.addRewardItem);
     this.model.rewards().each(this.addRewardItem.bind(this));
     this.listenTo(this.model.rewards(), "remove", this.removeRewardItem);
+    this.listenTo(this.model.rewards(), "change", this.render);
   },
   render: function() {
     var content = this.template({project: this.model});
