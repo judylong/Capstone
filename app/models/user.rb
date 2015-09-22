@@ -3,7 +3,14 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 6, allow_nil: true }
   validates :email, uniqueness: true
 
+
+  validates :password_confirmation, length: { minimum: 6, allow_blank: true }
+  validates :email_confirmation, length: { minimum: 6, allow_blank: true }
+  validate :email_and_password_confirmation
+
   attr_reader :password
+  attr_accessor :password_confirmation, :email_confirmation
+
   after_initialize :ensure_session_token
 
   has_many :projects,
@@ -22,12 +29,20 @@ class User < ActiveRecord::Base
   has_attached_file :avatar, styles: { medium: "220x220>", thumb: "160x160>", default_url: "/images/:style/missing.png"}, default_url: "missing.png"
   validates_attachment_content_type :avatar, content_type: /\Aimage\.*\Z/
 
+  def email_and_password_confirmation
+    if (password_confirmation)
+      errors.add(:password, "bad password re-type") if password != password_confirmation
+    elsif (email_confirmation)
+      errors.add(:password, "bad email re-type") if email != email_confirmation
+    end
+  end
+
   def self.generate_session_token
     SecureRandom::urlsafe_base64
   end
 
   def self.find_by_credentials(email, password)
-    user = User.find_by_email(email)
+    user = User.find_by(email: email)
     user.try(:is_password?, password) ? user : nil
   end
 

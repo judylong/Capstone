@@ -1,12 +1,12 @@
 module Api
   class UsersController < ApiController
     def show
-      @user = User.find(params[:id])
+      @user = User.includes(:backed_projects).find(params[:id])
       render :show
     end
 
     def index
-      @users = User.all
+      @users = User.includes(:backed_projects).all
       render :index
     end
 
@@ -16,13 +16,13 @@ module Api
         log_in(@user)
         render :show
       else
-        render json: @user.errors.full_messages, status: unprocessable_entity
+        render json: @user.errors.full_messages, status: :unprocessable_entity
       end
     end
 
     protected
     def user_params
-      params.require(:user).permit(:email, :password)
+      params.require(:user).permit(:email, :password, :email_confirmation, :password_confirmation)
     end
   end
 end

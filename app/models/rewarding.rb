@@ -13,7 +13,7 @@ class Rewarding < ActiveRecord::Base
 
   def check_unique_backer
     if reward_backer.backed_projects.exists?(project.id)
-      errors.add(:backer_id, "user can only back once00")
+      errors.add(:backer_id, "user can only back once")
     end
 
   end
