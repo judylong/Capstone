@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
 
 
   validates :password_confirmation, length: { minimum: 6, allow_blank: true }
-  validates :email_confirmation, length: { minimum: 6, allow_blank: true }
+  validates :email_confirmation, length: { minimum: 1, allow_blank: true }
   validate :email_and_password_confirmation
 
   attr_reader :password
