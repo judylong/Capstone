@@ -1,0 +1,35 @@
+/*rewards*/
+div.rewards {
+  /*border: solid 1px black;*/
+  float: right;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+ul.rewards-list {
+  padding: 0;
+}
+
+ul.rewards-list li {
+  /*border: solid 1px #d9d9de;*/
+  width: 320px;
+  margin: 10px;
+  padding: 20px;
+  background: #f7fafa;
+}
+
+ul.rewards-list li:hover {
+  border-radius: 6px;
+  background: rgb(60, 221, 101);
+  color: rgb(45, 200, 80);
+}
+
+li.become-backer {
+  cursor: pointer;
+}
+
+div.rewards h1 {
+  padding-left: 10px;
+  margin: 50px 0px;
+  font-size: 22px;
+}

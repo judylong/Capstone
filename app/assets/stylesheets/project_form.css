@@ -1,0 +1,81 @@
+ul.project-inputs {
+  background: white;
+  margin: 10px auto;
+  width: 620px;
+  padding: 20px;
+  border: solid 1px #d9d9de;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+ul.project-inputs li {
+  background: #f7fafa;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  padding: 4px;
+}
+
+label {
+  font-weight: 700;
+}
+
+ul.project-inputs input {
+  border: solid 1px #d9d9de;
+  border-radius: 3px;
+  width: 450px;
+  padding: 5px;
+}
+
+div.inputs-right {
+  float: right;
+}
+
+ul.project-inputs label {
+  float: left;
+  /*border: solid 1px orange;*/
+  width: 120px;
+  font-size: 12px;
+  padding: 10px;
+}
+
+ul.project-inputs p {
+  width: 400px;
+  padding: 5px 10px;
+  /*border: solid 1px black;*/
+}
+
+ul.project-inputs textarea {
+  width: 289px;
+  background: white;
+  resize: none;
+  border: solid 1px #d9d9de;
+  border-radius: 3px;
+  padding: 10px;
+  width: 400px;
+}
+
+ul.project-inputs input {
+  background: white;
+  border: solid 1px #d9d9de;
+  width: 400px;
+  padding: 10px;
+}
+
+select.category-drop-down {
+  background: white;
+  border: solid 1px #d9d9de;
+  width: 420px;
+  padding: 10px;
+}
+
+
+div.proj-img-div {
+  border: 1px dashed #d9d9de;
+  border-radius: 3px;
+  background: white;
+  width: 420px;
+}
+
+#input-project-image {
+  border: none;
+}

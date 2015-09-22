@@ -1,0 +1,72 @@
+/*header*/
+
+header.header {
+  border-bottom: 1px solid #d9d9de;
+  background: white;
+}
+
+ul.header-list li {
+  float: left
+}
+
+header li {
+  float:left;
+  padding: 20px 15px 20px 15px;
+}
+
+nav.primary-nav {
+  float:left;
+  border-right: solid 1px #d9d9de
+}
+
+nav.user-nav {
+  float:right
+
+}
+
+h1.header-logo {
+  float:left;
+}
+
+div.header-logo {
+  float:left;
+}
+
+ul.header-list li {
+  float: left
+}
+
+header li {
+  float:left;
+  padding: 20px 15px 20px 15px;
+}
+
+nav.primary-nav {
+  float:left;
+  border-right: solid 1px #d9d9de
+}
+
+nav.user-nav {
+  float:right
+}
+
+h1.header-logo {
+  float:left;
+}
+
+div.header-logo {
+  float:left;
+}
+
+nav {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+nav.user-nav {
+  color: rgb(0, 160, 255);
+}
+
+nav.primary-nav {
+  color: rgb(130, 133, 135);
+}

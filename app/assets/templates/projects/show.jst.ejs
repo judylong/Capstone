@@ -2,7 +2,7 @@
   <div class="title-section">
     <h1 class:"project-title">Title: <%= project.escape('title') %></h1>
     <p>
-      by <a href="#users/<%= project.escape('owner_id')%>"><%= project.escape('owner_name')%></a>
+      by <strong><a href="#users/<%= project.escape('owner_id')%>"><%= project.escape('owner_name')%></a></strong>
     </p>
   </div>
 
@@ -11,25 +11,37 @@
 
     </div>
     <div class="stats">
+      <h1>#</h1>
       <strong><%= project.escape('num_project_backers')%></strong>
-      <br>
       <label>backers</label>
-
-      <strong></strong>
       <br>
-      <label>Goal: $<%= project.escape('goal')%></label>
-
-      <strong></strong>
       <br>
-      <label>End date: <%= project.escape('end_date')%></label>
+      <h1>$</h1>
+      <strong>pledged of $<%= project.escape('goal')%> goal</strong>
+      <br>
+      <br>
+      <h1>#</h1>
+      <strong>days to go</strong>
+      <br>
+      <label>(End date: <%= project.escape('end_date')%>)</label>
     </div>
   </div>
   <div class="top-row-2 group">
     <div class="blurb">
-      <%= project.escape('description')%>
+      Short Desc: <%= project.escape('description')%>
     </div>
     <div class="owner-desc">
-      <%= project.escape('owner_name')%>
+      <strong>Owner: <%= project.escape('owner_name')%></strong>
+      <div class="owner-desc-sub">
+        <p>
+          external website: <a href="#"><%= project.escape('owner_name')%></a>
+        </p>
+        <br>
+        <p>
+          <a href="#">See full bio</a>
+        </p>
+
+      </div>
     </div>
   </div>
 </section>
@@ -41,7 +53,7 @@
 
   </div>
   <div class="rewards">
-    <p>Rewards</p>
+    <h1>Rewards</h1>
     <ul class="rewards-list">
 
     </ul>
