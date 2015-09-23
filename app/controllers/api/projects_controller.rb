@@ -32,6 +32,7 @@ module Api
                                       :end_date,
                                       :owner_id,
                                       :category_id,
+                                      :full_description,
                                       :image)
     end
 
