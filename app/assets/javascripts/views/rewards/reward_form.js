@@ -7,6 +7,8 @@ Capstone.Views.RewardForm = Backbone.View.extend({
     return this;
   },
 
+  tagName: "li",
+
   className: "reward-form group",
 
   initialize: function(options) {
