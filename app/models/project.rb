@@ -1,5 +1,17 @@
 class Project < ActiveRecord::Base
+  include PgSearch
+  multisearchable :against => [:description, :full_description, :title]
   # validates :goal, format: { with: /^[0-9]+$/, on: :create}
+
+  validates :full_description,
+            :title,
+            :description,
+            :goal,
+            :end_date,
+            :owner_id,
+            :category_id,
+            presence: true
+
   has_attached_file :image, default_url: "missing.png"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
