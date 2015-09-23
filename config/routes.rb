@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :show, :index]
     resource :session, only: [:create, :show, :destroy]
     resources :rewardings, only: [:create]
+    get "/search", to: "static_pages#search"
   end
 
   get "/auth/:provider/callback", to: "api/sessions#omniauth"
