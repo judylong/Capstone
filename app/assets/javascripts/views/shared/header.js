@@ -5,7 +5,8 @@ Capstone.Views.Header = Backbone.View.extend({
   },
 
   events: {
-    "click #log-out-link": "logOut"
+    "click #log-out-link": "logOut",
+    "submit .query-form": "redirectSearchResults"
   },
 
   template: JST['shared/header'],
@@ -23,5 +24,13 @@ Capstone.Views.Header = Backbone.View.extend({
         Backbone.history.navigate("session/new", { trigger: true });
       }
     });
+  },
+
+  redirectSearchResults: function(e) {
+    // debugger
+    e.preventDefault();
+    // Backbone.history.navigate("search_results", {trigger: true})
+    // Backbone.history.navigate("search_results/"+ $(e.currentTarget).val(), {trigger: true})
+    Backbone.history.navigate("search_results/"+$(".query").val(), {trigger: true})
   }
 });
