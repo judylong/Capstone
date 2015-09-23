@@ -24,11 +24,16 @@ Capstone.Views.RewardItem = Backbone.View.extend({
       success: function() {
         Capstone.currentUser.backed_projects().add(new Capstone.Models.Project({id: this.model.attributes.project_id}))
         this.model.set({num_reward_backers: this.model.attributes.num_reward_backers + 1});
+        this.project.set({num_project_backers: this.project.attributes.num_project_backers + 1});
         this.render();
       }.bind(this),
       error: function() {
         alert('already backed project')
       }
     })
+  },
+
+  initialize: function(options) {
+    this.project = options.project
   }
 })

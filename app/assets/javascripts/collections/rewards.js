@@ -5,8 +5,8 @@ Capstone.Collections.Rewards = Backbone.Collection.extend({
 
   model: Capstone.Models.Reward,
 
-  initialize: function(models, options) {
-    this.project = options.project;
-  }
+  // initialize: function(models, options) {
+  //   this.project = options.project;
+  // }
 
 })
