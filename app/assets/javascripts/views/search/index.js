@@ -9,16 +9,11 @@ Capstone.Views.SearchResultsIndex = Backbone.CompositeView.extend({
     this.searchResults.each(this.addSearchResultsIndexItem.bind(this));
     this.listenTo(this.searchResults, 'remove', this.removeSearchResultsIndexItem);
 
-    // debugger
-    // this.listenTo($(".query"), "change", this.search)
-    // this.search();
     this.qstring = options.qstring
     this.search()
   },
 
   events: {
-    // "change .query": "search",
-    // "submit .query-form": "search",
     "click .next-page": "nextPage",
     "click .prev-page": "prevPage"
   },
@@ -43,11 +38,8 @@ Capstone.Views.SearchResultsIndex = Backbone.CompositeView.extend({
   },
 
   search: function(e) {
-    // debugger
     if (e) { e.preventDefault() };
     this.searchResults.pageNum = 1;
-    // debugger
-    // this.searchResults.query = $(".query").val();
     this.searchResults.query = this.qstring;
 
     this.searchResults.fetch({

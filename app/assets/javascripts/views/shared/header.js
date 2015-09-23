@@ -27,10 +27,7 @@ Capstone.Views.Header = Backbone.View.extend({
   },
 
   redirectSearchResults: function(e) {
-    // debugger
     e.preventDefault();
-    // Backbone.history.navigate("search_results", {trigger: true})
-    // Backbone.history.navigate("search_results/"+ $(e.currentTarget).val(), {trigger: true})
     Backbone.history.navigate("search_results/"+$(".query").val(), {trigger: true})
   }
 });

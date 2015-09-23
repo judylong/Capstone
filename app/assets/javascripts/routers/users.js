@@ -17,7 +17,6 @@ Capstone.Routers.Users = Backbone.Router.extend({
   },
 
   showResults: function(qstring) {
-    // debugger
     var view = new Capstone.Views.SearchResultsIndex({qstring: qstring});
     this._swapView(view);
   },
