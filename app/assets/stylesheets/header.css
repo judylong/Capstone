@@ -70,3 +70,9 @@ nav.user-nav {
 nav.primary-nav {
   color: rgb(130, 133, 135);
 }
+
+nav.query-nav {
+  margin-left: 10px;
+  margin-top: 16px;
+  float: left;
+}
