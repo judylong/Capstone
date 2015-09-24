@@ -7,8 +7,9 @@ Capstone.Views.SearchResultsIndex = Backbone.CompositeView.extend({
       this.qstring = options.category;
     } else {
       this.searchResults = new Capstone.Collections.SearchResults({searchType: "query"});
+      this.qstring = options.qstring;
     }
-    
+
     this.searchResults.pageNum = 1;
     this.listenTo(this.searchResults, "sync", this.render);
 
@@ -29,7 +30,6 @@ Capstone.Views.SearchResultsIndex = Backbone.CompositeView.extend({
   template: JST['search/index'],
 
   render: function() {
-    // var content = this.template();
     var content = this.template({results: this.searchResults});
     this.$el.html(content);
     this.attachSubviews();
@@ -50,7 +50,6 @@ Capstone.Views.SearchResultsIndex = Backbone.CompositeView.extend({
     this.searchResults.pageNum = 1;
     this.searchResults.query = this.qstring;
 
-    // this.searchResults.search(this.url);
     this.searchResults.fetch({
       data: {
         query: this.searchResults.query,
