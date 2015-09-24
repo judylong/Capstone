@@ -12,11 +12,13 @@ Capstone.Views.RewardForm = Backbone.View.extend({
   className: "reward-form group",
 
   initialize: function(options) {
-    this.project = options.project
+    this.project = options.project;
+    this.projectFormView = options.projectFormView;
   },
 
   events: {
-    "click #checkbox":"quantityInput"
+    "click #checkbox":"quantityInput",
+    "click button.remove-reward-form": "removeRewardForm"
   },
 
   quantityInput: function(e) {
@@ -25,6 +27,12 @@ Capstone.Views.RewardForm = Backbone.View.extend({
     } else {
       $('#checktext').addClass('hideMe')
     }
-  }
+  },
+
+  removeRewardForm: function(e) {
+    e.preventDefault();
+    this.projectFormView.removeSubview('.rewards-form-list', this);
+  },
+
 
 })

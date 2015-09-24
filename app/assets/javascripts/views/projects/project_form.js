@@ -23,12 +23,8 @@ Capstone.Views.ProjectForm = Backbone.CompositeView.extend({
     if (e) {
       e.preventDefault();
     }
-    var subview = new Capstone.Views.RewardForm({project: this.model});
+    var subview = new Capstone.Views.RewardForm({project: this.model, projectFormView: this});
     this.addSubview('.rewards-form-list', subview);
-  },
-
-  removeRewardForm: function(rewardForm) {
-    this.removeModelSubview('.rewards-form-list', rewardForm);
   },
 
   submit: function(e) {
