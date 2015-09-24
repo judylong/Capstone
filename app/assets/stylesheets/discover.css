@@ -1,0 +1,52 @@
+div.discover h1 {
+  font-size: 36px;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+ul.discover-list {
+  margin: auto;
+  width: 820px;
+}
+
+ul.discover-list li {
+  height: 100px;
+  width: 170px;
+  float: left;
+  border-radius: 5px;
+  font-size: 18px;
+  border: 1px solid #d9d9de;
+  margin: 0px 10px 10px 20px;
+  text-align: center;
+  display: block;
+  background: white;
+  line-height: 100px;
+}
+
+ul.discover-list li a {
+  display: inline
+}
+
+
+div.discover {
+  color: rgb(130, 133, 135);
+  /*padding-top: 50px;
+  background: white;*/
+}
+
+
+/*ul li {
+    line-height: 12px;
+}*/
+
+/*ul li a {
+    display: inline-block;
+    vertical-align: middle;
+}*/
+/*
+ul li:before{
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}*/

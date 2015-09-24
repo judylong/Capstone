@@ -13,7 +13,13 @@ Capstone.Routers.Users = Backbone.Router.extend({
     "users/:id":"showUser",
     "session/new":"logIn",
     "_=_":"index",
-    "search_results/:qstring":"showResults"
+    "search_results/:qstring":"showResults",
+    "discover":"discoverShow"
+  },
+
+  discoverShow: function() {
+    var view = new Capstone.Views.Discover();
+    this._swapView(view);
   },
 
   showResults: function(qstring) {
