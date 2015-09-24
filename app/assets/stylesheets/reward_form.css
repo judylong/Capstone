@@ -55,7 +55,6 @@ input.hideMe {
 
 div.reward-limited-checkbox {
   height: 55px;
-  /*float: left;*/
 }
 
 /*
@@ -64,12 +63,29 @@ div.reward-limited-checkbox {
   position: absolute;
   margin: 10px auto auto 10px;
 }*/
+div.checkbox-div {
+  border-left: 1px solid #d9d9de;
+  /*border: 1px solid blue;*/
+  width: 309px;
+  float: right;
+}
 
-#checktext {
-  width: 50px;
+div.checkbox-div input {
+  float: left;
+}
+
+div.reward-table input.checkbox {
+  width: 20px;
+  height: 54px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+div.reward-table input.checktext {
+  width: 100px;
   height: 24px;
-  margin-left: 50px;
   border: 1px solid #d9d9de;
+  margin-top: 5px;
   position: relative;
 }
 
@@ -91,9 +107,27 @@ ol li.reward-form {
   padding: 5px;
   background: #f7fafa;
   margin-bottom: 10px;
+  font-weight: normal;
+  font-size: 12px;
 }
 
 ol li:before {
-    content: 'Reward #' counter(item, decimal);
-    counter-increment: item;
+  content: 'Reward #' counter(item, decimal);
+  counter-increment: item;
+}
+
+div.drop-down-div {
+  float: left;
+  width: 298px;
+  height: 24px;
+  border-left: solid 1px #d9d9de;
+  padding: 5px;
+  border-radius: 0;
+  background: white;
+  /*border: 1px solid blue;*/
+}
+
+select.shipping-drop-down {
+  width: 100%;
+  background: white;
 }

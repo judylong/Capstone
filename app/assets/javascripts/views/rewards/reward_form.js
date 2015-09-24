@@ -17,15 +17,15 @@ Capstone.Views.RewardForm = Backbone.View.extend({
   },
 
   events: {
-    "click #checkbox":"quantityInput",
+    "click .checkbox":"quantityInput",
     "click button.remove-reward-form": "removeRewardForm"
   },
 
   quantityInput: function(e) {
-    if ($('#checkbox').prop('checked')) {
-      $('#checktext').removeClass('hideMe')
+    if (this.$('.checkbox').prop('checked')) {
+      this.$('.checktext').removeClass('hideMe')
     } else {
-      $('#checktext').addClass('hideMe')
+      this.$('.checktext').addClass('hideMe')
     }
   },
 

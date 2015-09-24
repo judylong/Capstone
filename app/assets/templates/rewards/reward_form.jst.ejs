@@ -18,13 +18,21 @@
 
   <div class="reward-shipping-details group">
     <label>Shipping details</label>
-    <input type="select" name="project[rewards][][shipping_location]" value="">
+    <div class="drop-down-div">
+      <select class="shipping-drop-down" name="project[rewards][][shipping_location]">
+        <% Capstone.SHIPPING.forEach(function(shipping_option) { %>
+          <option><%= shipping_option %></option>
+        <% }); %>
+      </select>
+    </div>
   </div>
 
   <div class="reward-limited-checkbox group">
-    <input type="checkbox" id="checkbox" class="limit_checkbox">
     <label>Limit quantity</label>
-    <input type="number" id="checktext" class="hideMe" name="project[rewards][][limited_quantity]">
+    <div class="checkbox-div group">
+      <input type="checkbox" class="checkbox limit_checkbox">
+      <input type="number" class="checktext hideMe" name="project[rewards][][limited_quantity]">
+    </div>
   </div>
 
 </div>
