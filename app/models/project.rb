@@ -1,6 +1,7 @@
 class Project < ActiveRecord::Base
   include PgSearch
   multisearchable :against => [:description, :full_description, :title]
+  pg_search_scope :search_by_category, :against => :category
   # validates :goal, format: { with: /^[0-9]+$/, on: :create}
 
   CATEGORIES = ["Home Security", "Art", "Odd Services", "Enemy Capture", "World Domination", "Journalism", "Film & Video"];
