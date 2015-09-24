@@ -1,0 +1,14 @@
+div.search-results {
+  margin: 50px auto;
+  width: 1100px;
+}
+
+label.result-total-count {
+  color: #2bde73;
+}
+
+div.search-results > h1 {
+  margin-left: 20px;
+  margin-bottom: 30px;
+  font-size: 22px;
+}

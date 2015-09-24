@@ -1,9 +1,22 @@
-<nav>
-  Displaying page number <%= results.pageNum %>
-  out of <%= results.total_count %> results
-  <a class = "prev-page" href="javascript:void(0)">Prev</a>
-  <a class = "next-page" href="javascript:void(0)">Next</a>
-</nav>
+<% if (results.total_count) { %>
+  <nav class="search-nav">
+    Displaying page number <%= results.pageNum %>
+    <a class = "prev-page" href="javascript:void(0)">Prev</a>
+    <a class = "next-page" href="javascript:void(0)">Next</a>
+  </nav>
+  <h1>
+    Explore <label class="result-total-count"><%= results.total_count %></label>
+    <% if (results.total_count == 1) {%>
+      project
+    <% } else { %>
+      projects
+    <%  } %>
+  </h1>
+<% } else { %>
+  <h1>
+    Oops! Looks like we couldn’t find any results. Why not change some things around or broaden your search?
+  </h1>
+<% } %>
 
 <ul class="search-results-index">
 

@@ -1,6 +1,6 @@
 /*projects-index*/
 div.projects-index {
-  width: 1080px;
+  width: 1100px;
   margin: 50px auto;
 }
 
@@ -12,7 +12,7 @@ div.projects-index-item {
   margin-bottom: 20px;
   border-radius: 6px;
   height: 416px;
-  width: 210px;
+  width: 230px;
   position: relative;
   background: white;
 }

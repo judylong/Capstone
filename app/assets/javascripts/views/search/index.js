@@ -18,6 +18,8 @@ Capstone.Views.SearchResultsIndex = Backbone.CompositeView.extend({
     "click .prev-page": "prevPage"
   },
 
+  className: "search-results",
+
   template: JST['search/index'],
 
   render: function() {
