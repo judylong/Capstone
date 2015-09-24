@@ -9,7 +9,7 @@ class Project < ActiveRecord::Base
             :goal,
             :end_date,
             :owner_id,
-            :category_id,
+            :category,
             presence: true
 
   has_attached_file :image, default_url: "missing.png"

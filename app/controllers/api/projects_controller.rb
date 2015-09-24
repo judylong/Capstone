@@ -31,7 +31,7 @@ module Api
                                       :goal,
                                       :end_date,
                                       :owner_id,
-                                      :category_id,
+                                      :category,
                                       :full_description,
                                       :image)
     end
