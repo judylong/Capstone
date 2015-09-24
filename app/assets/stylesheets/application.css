@@ -63,12 +63,13 @@ div.title-section h1 {
 
 section.top-section {
   /*border: 1px solid blue;*/
-  background: #f7fafa;
+  width: 1080px;
+  margin: auto;
 }
 
 section.bottom-section {
   /*border: 1px solid orange;*/
-  background: white;
+  background: #fff;
 }
 
 div.full-description {
@@ -78,6 +79,12 @@ div.full-description {
   margin-left: 20px;
   float: left;
 }
+
+div.bottom-content {
+  width: 1080px;
+  margin: auto;
+}
+
 
 div.top-row-1 {
   /*border: 2px solid purple;*/

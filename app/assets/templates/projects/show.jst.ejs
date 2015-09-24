@@ -8,7 +8,7 @@
 
   <div class="top-row-1 group">
     <div class="video">
-
+      <img src="<%= project.escape('image_url') %>">
     </div>
     <div class="stats">
       <h1><%= project.escape('num_project_backers')%></h1>
@@ -46,15 +46,17 @@
 </section>
 
 <section class="bottom-section group">
-  <div class="full-description">
-    <h1>About this project</h1>
-    <strong><h1><%= project.escape('full_description')%></h1></strong>
+  <div class="bottom-content">
+    <div class="full-description">
+      <h1>About this project</h1>
+      <strong><h1><%= project.escape('full_description')%></h1></strong>
 
-  </div>
-  <div class="rewards">
-    <h1>Rewards</h1>
-    <ul class="rewards-list">
+    </div>
+    <div class="rewards">
+      <h1>Rewards</h1>
+      <ul class="rewards-list">
 
-    </ul>
+      </ul>
+    </div>
   </div>
 </section>
