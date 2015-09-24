@@ -1,4 +1,16 @@
 Capstone.Collections.SearchResults = Backbone.Collection.extend({
+  initialize: function(options) {
+    this.searchType = options.searchType
+  },
+
+  url: function() {
+    if (this.searchType === "category") {
+      return "/api/search_category"
+    } else {
+      return "/api/search"
+    }
+  },
+
   parse: function(resp) {
     if (resp.total_count) {
       this.total_count = resp.total_count;
@@ -15,25 +27,6 @@ Capstone.Collections.SearchResults = Backbone.Collection.extend({
     }
 
     return new Capstone.Models[type](attrs);
-  },
-
-  search: function(url) {
-    // debugger
-    $.ajax({
-      method: "GET",
-      url: url,
-      data: {
-        query: this.query,
-        page: 1
-      },
-      success: function(resp){
-        this.parse(resp);
-        resp.results.forEach(function(result) {
-          // debugger
-          this.add(this.model(result))
-        }.bind(this))
-      }.bind(this)
-    });
   }
 
  })

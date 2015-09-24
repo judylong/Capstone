@@ -1,7 +1,14 @@
 Capstone.Views.SearchResultsIndex = Backbone.CompositeView.extend({
   initialize: function(options) {
     this.bindScroll();
-    this.searchResults = new Capstone.Collections.SearchResults();
+
+    if (options.category) {
+      this.searchResults = new Capstone.Collections.SearchResults({searchType: "category"});
+      this.qstring = options.category;
+    } else {
+      this.searchResults = new Capstone.Collections.SearchResults({searchType: "query"});
+    }
+    
     this.searchResults.pageNum = 1;
     this.listenTo(this.searchResults, "sync", this.render);
 
@@ -9,13 +16,6 @@ Capstone.Views.SearchResultsIndex = Backbone.CompositeView.extend({
     this.searchResults.each(this.addSearchResultsIndexItem.bind(this));
     this.listenTo(this.searchResults, 'remove', this.removeSearchResultsIndexItem);
 
-    if (options.qstring) {
-      this.qstring = options.qstring;
-      this.url = "/api/search"
-    } else {
-      this.qstring = options.category;
-      this.url = "/api/search_category"
-    }
     this.search()
   },
 
@@ -50,13 +50,13 @@ Capstone.Views.SearchResultsIndex = Backbone.CompositeView.extend({
     this.searchResults.pageNum = 1;
     this.searchResults.query = this.qstring;
 
-    this.searchResults.search(this.url);
-    // this.searchResults.fetch({
-    //   data: {
-    //     query: this.searchResults.query,
-    //     page: 1
-    //   }
-    // });
+    // this.searchResults.search(this.url);
+    this.searchResults.fetch({
+      data: {
+        query: this.searchResults.query,
+        page: 1
+      }
+    });
   },
 
   bindScroll: function() {
