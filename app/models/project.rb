@@ -19,8 +19,6 @@ class Project < ActiveRecord::Base
     class_name: "User",
     foreign_key: "owner_id"
 
-  belongs_to :category
-
   has_many :rewards
 
   has_many :project_backers, through: :rewards, source: :reward_backers

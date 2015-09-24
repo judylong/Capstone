@@ -1,13 +1,7 @@
 u1 = User.create(email: 'one@example.com', password: 'password', name: "User1")
 u2 = User.create(email: 'two@example.com', password: 'password', name: "User2")
 
-p1 = Project.create(title: 'project1',
-                    description: 'my first project',
-                    full_description: 'here is a full description placeholder',
-                    goal: 500,
-                    end_date: DateTime.new(2020, 8, 31, 11, 0, 0),
-                    owner_id: 1,
-                    category: "World Domination")
+p1 = Project.create(title: 'project1', description: 'my first project', full_description: 'here is a full description placeholder', goal: 500, end_date: DateTime.new(2020, 8, 31, 11, 0, 0), owner_id: 1, category: "World Domination")
 
 p2 = Project.create(title: 'project2',
                     description: 'my second project',
@@ -25,7 +19,6 @@ p1 = Project.create(title: 'projectApple',
                     end_date: DateTime.new(2015, 10, 31, 11, 0, 0),
                     owner_id: 2,
                     category: "World Domination")
-c1 = Category.create(title: 'category1')
 r1 = Reward.create(project_id: 1,
                     pledge_amount: 5,
                     description: "a high five for every five",
