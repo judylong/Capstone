@@ -3,6 +3,8 @@ class Project < ActiveRecord::Base
   multisearchable :against => [:description, :full_description, :title]
   # validates :goal, format: { with: /^[0-9]+$/, on: :create}
 
+  CATEGORIES = ["Home Security", "Art", "Odd Services", "Enemy Capture/Destruction", "World Domination"];
+
   validates :full_description,
             :title,
             :description,

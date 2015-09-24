@@ -20,7 +20,7 @@
     <label>Shipping details</label>
     <div class="drop-down-div">
       <select class="shipping-drop-down" name="project[rewards][][shipping_location]">
-        <% Capstone.SHIPPING.forEach(function(shipping_option) { %>
+        <% Capstone.shipping.forEach(function(shipping_option) { %>
           <option><%= shipping_option %></option>
         <% }); %>
       </select>

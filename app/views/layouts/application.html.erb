@@ -7,6 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <script>
+    var categories = [];
+    <% Project::CATEGORIES.each do |category| %>
+      categories.push("<%= category.html_safe %>");
+    <% end %>
+
+    var shipping = [];
+    <% Reward::SHIPPING.each do |ship| %>
+      shipping.push("<%= ship.html_safe %>");
+    <% end %>
+  </script>
 
 <%= flash[:errors] %>
 <%= yield %>

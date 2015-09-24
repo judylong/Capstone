@@ -1,4 +1,6 @@
 class Reward < ActiveRecord::Base
+  SHIPPING = ["No shipping involved", "Only ships to certain countries", "Ships anywhere in the world"]
+
   belongs_to :project
   has_many :rewardings
 
