@@ -1,6 +1,6 @@
 div.reward-table {
   float: right;
-  width: 450px;
+  width: 452px;
   margin: auto;
   background: rgb(242, 242, 243);
   border: solid 1px #d9d9de;
@@ -67,7 +67,7 @@ div.checkbox-div {
   border-left: 1px solid #d9d9de;
   /*border: 1px solid blue;*/
   width: 309px;
-  float: right;
+  float: left;
 }
 
 div.checkbox-div input {
