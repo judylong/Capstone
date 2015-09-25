@@ -49,12 +49,12 @@ ul {
   padding-bottom: 0;
 }
 
-form.big-project-form {
-  padding-bottom: 50px;
+body {
+  min-height: 100%
 }
 
-html {
-  /*min-height: 100%;*/
+form.big-project-form {
+  padding-bottom: 50px;
 }
 
 body {
