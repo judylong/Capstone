@@ -29,7 +29,7 @@ Capstone.Views.RewardItem = Backbone.View.extend({
         this.render();
       }.bind(this),
       error: function() {
-        alert('already backed project')
+        alert('cannot back project')
       }
     })
   },
