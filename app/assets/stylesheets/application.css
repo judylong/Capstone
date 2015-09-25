@@ -164,3 +164,8 @@ div.bottom-content {
 .hideMeRails {
   display: none;
 }
+
+div.top-row-1 img.show-img {
+  width: 680px;
+  height: 500px;
+}

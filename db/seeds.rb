@@ -63,7 +63,8 @@ Project.create(title: "Drakken's World",
                 goal: 5000,
                 end_date: Date.new(2020, 11),
                 owner_id: 1,
-                category: "World Domination")
+                category: "World Domination",
+                image: File.open(Rails.root.join("db", "seed_images", "drakken.png")))
 Reward.create(project_id: 1,
                 pledge_amount: 50,
                 description: "A 15% off coupon for Smarty Mart",
@@ -89,7 +90,8 @@ Project.create(title: 'A Better World',
                 goal: 15000,
                 end_date: Date.new(2020, 11),
                 owner_id: 2,
-                category: "World Domination")
+                category: "World Domination",
+                image: File.open(Rails.root.join("db", "seed_images", "vlad.jpg")))
 Reward.create(project_id: 2,
                 pledge_amount: 100,
                 description: "A live demonstration of my powers.",
@@ -114,7 +116,8 @@ Project.create(title: 'Make the world a safer place',
                 goal: 50000,
                 end_date: Date.new(2020, 11),
                 owner_id: 3,
-                category: "Enemy Capture")
+                category: "Enemy Capture",
+                image: File.open(Rails.root.join("db", "seed_images", "aku.jpg")))
 Reward.create(project_id: 3,
                 pledge_amount: 1000,
                 description: "A trial as my minion.",
@@ -140,7 +143,8 @@ Project.create(title: 'Volcano Repairs',
                 goal: 500,
                 end_date: Date.new(2020, 11),
                 owner_id: 4,
-                category: "Odd Services")
+                category: "Odd Services",
+                image: File.open(Rails.root.join("db", "seed_images", "mojo.jpg")))
 Reward.create(project_id: 4,
                 pledge_amount: 5,
                 description: "A high five for every five.",
@@ -165,7 +169,8 @@ Project.create(title: 'An documentary on yours truely',
                 goal: 500,
                 end_date: Date.new(2020, 11),
                 owner_id: 5,
-                category: "Film & Video")
+                category: "Film & Video",
+                image: File.open(Rails.root.join("db", "seed_images", "joker.jpg")))
 Reward.create(project_id: 5,
                 pledge_amount: 10,
                 description: "A letter in the mail.",
@@ -192,7 +197,8 @@ Project.create(title: 'Our corp needs you',
                 goal: 500,
                 end_date: Date.new(2020, 11),
                 owner_id: 6,
-                category: "World Domination")
+                category: "World Domination",
+                image: File.open(Rails.root.join("db", "seed_images", "giovanni.png")))
 Reward.create(project_id: 6,
                 pledge_amount: 5,
                 description: "A grunt uniform.",
@@ -218,7 +224,8 @@ Project.create(title: 'The New Underworld',
                 goal: 500,
                 end_date: Date.new(2020, 11),
                 owner_id: 7,
-                category: "Home Security")
+                category: "Home Security",
+                image: File.open(Rails.root.join("db", "seed_images", "hades.jpg")))
 Reward.create(project_id: 7,
                 pledge_amount: 12,
                 description: "A meeting with someone who has passed.",
@@ -245,7 +252,8 @@ Project.create(title: 'Capture the Power Rangers',
                 goal: 1000,
                 end_date: Date.new(2020, 11),
                 owner_id: 8,
-                category: "Enemy Capture")
+                category: "Enemy Capture",
+                image: File.open(Rails.root.join("db", "seed_images", "rita.jpg")))
 Reward.create(project_id: 8,
                 pledge_amount: 1,
                 description: "I'll lend you one of my putty patrollers for a day.",
@@ -271,7 +279,8 @@ Project.create(title: 'My Cat',
                 goal: 500,
                 end_date: Date.new(2020, 11),
                 owner_id: 9,
-                category: "Art")
+                category: "Art",
+                image: File.open(Rails.root.join("db", "seed_images", "claw.png")))
 Reward.create(project_id: 9,
                 pledge_amount: 5,
                 description: "You may see my cat in person.",
@@ -298,7 +307,8 @@ Project.create(title: 'Fund our world trips',
                 goal: 100000,
                 end_date: Date.new(2020, 11),
                 owner_id: 10,
-                category: "Odd Services")
+                category: "Odd Services",
+                image: File.open(Rails.root.join("db", "seed_images", "kip.jpg")))
 Reward.create(project_id: 10,
                 pledge_amount: 500,
                 description: "A piece of hunting equipment we used.",
