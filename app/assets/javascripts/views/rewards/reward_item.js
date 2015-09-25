@@ -25,6 +25,7 @@ Capstone.Views.RewardItem = Backbone.View.extend({
         Capstone.currentUser.backed_projects().add(new Capstone.Models.Project({id: this.model.attributes.project_id}))
         this.model.set({num_reward_backers: this.model.attributes.num_reward_backers + 1});
         this.project.set({num_project_backers: this.project.attributes.num_project_backers + 1});
+        this.project.set({amt_funded: this.project.get('amt_funded') + this.model.get('pledge_amount')});
         this.render();
       }.bind(this),
       error: function() {

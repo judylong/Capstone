@@ -25,5 +25,5 @@ class Project < ActiveRecord::Base
   has_many :rewards
 
   has_many :project_backers, through: :rewards, source: :reward_backers
-  has_many :project_backed_rewards, through: :project_backers, source: :backed_rewards
+
 end
