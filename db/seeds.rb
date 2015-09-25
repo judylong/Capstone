@@ -93,7 +93,6 @@ Project.create(title: 'A Better World',
 Reward.create(project_id: 2,
                 pledge_amount: 100,
                 description: "A live demonstration of my powers.",
-                limited_quantity: 250,
                 estimated_delivery: Date.new(2020, 11),
                 shipping_location: "Only United States")
 Reward.create(project_id: 2,
@@ -124,7 +123,7 @@ Reward.create(project_id: 3,
 Reward.create(project_id: 3,
                 pledge_amount: 2000,
                 description: "One of Samurai Jack's hats.",
-                limited_quantity: 10,
+                limited_quantity: 5,
                 estimated_delivery: Date.new(2020, 11),
                 shipping_location: "Only United States")
 Reward.create(project_id: 3,
@@ -156,7 +155,7 @@ Reward.create(project_id: 4,
 Reward.create(project_id: 4,
                 pledge_amount: 25,
                 description: "One of my old creations.",
-                limited_quantity: 150,
+                limited_quantity: 1,
                 estimated_delivery: Date.new(2020, 11),
                 shipping_location: "Ships anywhere in the world")
 
@@ -176,13 +175,13 @@ Reward.create(project_id: 5,
 Reward.create(project_id: 5,
                 pledge_amount: 25,
                 description: "A year's supply of laughing gas.",
-                limited_quantity: 550,
+                limited_quantity: 55,
                 estimated_delivery: Date.new(2020, 11),
                 shipping_location: "Only United States")
 Reward.create(project_id: 5,
                 pledge_amount: 50,
                 description: "A special surprise.",
-                limited_quantity: 150,
+                limited_quantity: 5,
                 estimated_delivery: Date.new(2020, 11),
                 shipping_location: "Ships anywhere in the world")
 
@@ -235,7 +234,7 @@ Reward.create(project_id: 7,
 Reward.create(project_id: 7,
                 pledge_amount: 1200,
                 description: "A look into my past.",
-                limited_quantity: 150,
+                limited_quantity: 2,
                 estimated_delivery: Date.new(2020, 11),
                 shipping_location: "No shipping involved")
 
@@ -288,7 +287,7 @@ Reward.create(project_id: 9,
 Reward.create(project_id: 9,
                 pledge_amount: 70,
                 description: "You can see a picture of my face from the past.",
-                limited_quantity: 150,
+                limited_quantity: 15,
                 estimated_delivery: Date.new(2020, 11),
                 shipping_location: "Only United States")
 
@@ -315,7 +314,7 @@ Reward.create(project_id: 10,
 Reward.create(project_id: 10,
                 pledge_amount: 50000,
                 description: "Elephant tusks.",
-                limited_quantity: 50,
+                limited_quantity: 10,
                 estimated_delivery: Date.new(2020, 11),
                 shipping_location: "Ships anywhere in the world")
 

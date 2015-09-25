@@ -5,11 +5,18 @@
 <strong>
   * <%= reward.escape("num_reward_backers") %> backers
 </strong>
+<span>
+  <% if ( reward.escape("limited_quantity") != "" )  { %>
+  Limited ( <%= parseInt(reward.escape("limited_quantity")) - parseInt(reward.escape("num_reward_backers")) %> left of <%= reward.escape("limited_quantity")%>)
+  <% } %>
+</span>
+<br>
 <br>
 <p>
   <%= reward.escape("description")%>
 </p>
-<%= reward.escape("limited_quantity")%>
+
+<br>
 
 <div class="delivery-shipping">
 
