@@ -63,3 +63,8 @@ div.brief-stats div.project-percent-pledged {
   padding: 0px;
     height: 6px;
 }
+
+div.brief-info > h1 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

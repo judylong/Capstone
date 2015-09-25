@@ -13,7 +13,7 @@ ul.rewards-list {
 ul.rewards-list li {
   /*border: solid 1px #d9d9de;*/
   width: 320px;
-  margin: 10px;
+  margin: 20px 10px;
   padding: 20px;
   background: #f7fafa;
 }

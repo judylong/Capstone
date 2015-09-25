@@ -43,9 +43,16 @@ ul {
 #main {
   padding-top: 50px;
   height: 100%;
-  padding-bottom: 200px;
+  padding-bottom: 150px;
 }
 
+#main > div {
+  padding-bottom: 100px;
+}
+
+#main > div.project-show {
+  padding-bottom: 0;
+}
 
 body {
   background: rgb(245, 249, 249);
@@ -78,6 +85,8 @@ section.top-section {
 section.bottom-section {
   /*border: 1px solid orange;*/
   background: #fff;
+  padding-bottom: 100px;
+
 }
 
 div.full-description {
@@ -89,7 +98,7 @@ div.full-description {
   float: left;
 }
 
-div.bottom-content {
+div.tent {
   width: 1080px;
   margin: auto;
 }
@@ -143,4 +152,9 @@ div.full-description h1 {
 
 div.full-description p {
   font-size: 18px;
+}
+
+div.bottom-content {
+  width: 1080px;
+  margin: auto;
 }
