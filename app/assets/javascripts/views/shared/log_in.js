@@ -15,7 +15,8 @@ Capstone.Views.LogIn = Backbone.View.extend({
   className: "signlog-div",
 
   events: {
-    "submit form":"submit"
+    "submit form":"submit",
+    "click button.guest":"loginGuest"
   },
   submit: function(e) {
     e.preventDefault();
@@ -38,5 +39,15 @@ Capstone.Views.LogIn = Backbone.View.extend({
     } else {
       Backbone.history.navigate("", { trigger: true })
     }
+  },
+
+  loginGuest: function(e) {
+    e.preventDefault();
+
+    Capstone.currentUser.logIn({
+      email: "one@example.com",
+      password: "password"
+    })
   }
+  
 })

@@ -49,13 +49,22 @@ div.signlog-div button:hover{
 }
 
 div.signlog-div button.fb {
-  background: rgb(59, 89, 152)
+  background: rgb(59, 89, 152);
 }
 
 div.signlog-div button.fb:hover {
-  background: rgb(48, 72, 123)
+  background: rgb(48, 72, 123);
 }
 
 /*#main > div.signlog-div {
   padding: 20px 20px 20px 20px;
 }*/
+
+
+div.signlog-div button.guest {
+  background: rgb(229, 23, 35)
+}
+
+div.signlog-div button.guest:hover {
+  background: rgb(208, 6, 40)
+}
