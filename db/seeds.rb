@@ -1,4 +1,3 @@
-guest = User.create(email: 'one@example.com', password: 'password', name: "User1")
 # u2 = User.create(email: 'two@example.com', password: 'password', name: "User2")
 #
 # p1 = Project.create(title: 'project1', description: 'my first project', full_description: 'here is a full description placeholder', goal: 500, end_date: DateTime.new(2020, 8, 31, 11, 0, 0), owner_id: 1, category: "World Domination")
@@ -56,7 +55,7 @@ yzma = User.create(email: 'yzma@disney.com', password: 'password', name: 'Yzma')
 thrax = User.create(email: 'thrax@chaos.com', password: 'password', name: 'Thrax')
 zim = User.create(email: 'zim@irk.com', password:'password', name: 'Zim')
 
-
+guest = User.create(email: 'one@example.com', password: 'password', name: "User1")
 Project.create(title: "Drakken's World",
                 description: 'I plan to use the death ray I make to rule the world',
                 full_description: 'The details are in the works, but I my plans will succeed with your help.',
