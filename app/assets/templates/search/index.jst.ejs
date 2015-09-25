@@ -1,12 +1,7 @@
-<% if (results.total_count) { %>
-  <nav class="search-nav">
-    Displaying page number <%= results.pageNum %>
-    <a class = "prev-page" href="javascript:void(0)">Prev</a>
-    <a class = "next-page" href="javascript:void(0)">Next</a>
-  </nav>
+<% if (results.total_count || results.count) { %>
   <h1>
-    Explore <label class="result-total-count"><%= results.total_count %></label>
-    <% if (results.total_count == 1) {%>
+    Explore <label class="result-total-count"><%= results.total_count || results.count %></label>
+    <% if (results.total_count == 1 || results.count == 1) {%>
       project
     <% } else { %>
       projects

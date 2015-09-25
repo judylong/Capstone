@@ -34,3 +34,10 @@ r3 = Reward.create(project_id: 1,
                     pledge_amount: 100,
                     description: "a no questions asked",
                     estimated_delivery: Date.new(2020, 11))
+
+# start of the fun...
+drakken = User.create(email: 'dr.drakken@disney.com', password: 'password', name: 'Dr.Drakken')
+vlad = User.create(email: 'vlad@nick.com', password: 'password', name: 'Vlad Masters')
+aku = User.create(email: 'lordAKU@cn.com', password: 'password', name: 'Aku')
+mojo = User.create(email: 'mojo@cn.com', password: 'password', name: 'Mojojojo')
+joker = User.create(email: 'mrJ@dc.com', password: 'password', name: 'Joker')

@@ -10,7 +10,7 @@ module Api
     end
 
     def show
-      @reward = Reward.find(params[:id])
+      @reward = Reward.includes(:reward_backers).find(params[:id])
       render :show
     end
 

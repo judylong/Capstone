@@ -12,7 +12,6 @@ module Api
     def search_category
       @search_results = Project
         .search_by_category(params[:query])
-        .page(params[:page])
       render :search_category
     end
 

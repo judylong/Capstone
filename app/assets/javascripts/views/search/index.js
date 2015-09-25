@@ -10,7 +10,6 @@ Capstone.Views.SearchResultsIndex = Backbone.CompositeView.extend({
       this.qstring = options.qstring;
     }
 
-    this.searchResults.pageNum = 1;
     this.listenTo(this.searchResults, "sync", this.render);
 
     this.listenTo(this.searchResults, 'add', this.addSearchResultsIndexItem);
@@ -18,11 +17,6 @@ Capstone.Views.SearchResultsIndex = Backbone.CompositeView.extend({
     this.listenTo(this.searchResults, 'remove', this.removeSearchResultsIndexItem);
 
     this.search()
-  },
-
-  events: {
-    "click .next-page": "nextPage",
-    "click .prev-page": "prevPage"
   },
 
   className: "search-results",
@@ -47,13 +41,11 @@ Capstone.Views.SearchResultsIndex = Backbone.CompositeView.extend({
 
   search: function(e) {
     if (e) { e.preventDefault() };
-    this.searchResults.pageNum = 1;
     this.searchResults.query = this.qstring;
 
     this.searchResults.fetch({
       data: {
-        query: this.searchResults.query,
-        page: 1
+        query: this.searchResults.query
       }
     });
   },
@@ -71,21 +63,6 @@ Capstone.Views.SearchResultsIndex = Backbone.CompositeView.extend({
     }
   },
 
-  nextPage: function(e) {
-    this.searchResults.fetch({
-      data: {
-        query: this.searchResults.query,
-        page: this.searchResults.pageNum + 1
-      },
-      success: function() {
-        this.searchResults.pageNum = this.searchResults.pageNum + 1
-      }.bind(this)
-    })
-  },
-
-  // prevPage: function(e) {
-  //   page: this.pageNum - 1
-  // }
   nextPageInfiniteScroll: function() {
     if (this.requestingNextPage) return;
 
