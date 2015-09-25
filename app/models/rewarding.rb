@@ -19,7 +19,6 @@ class Rewarding < ActiveRecord::Base
   end
 
   def rewards_remaining
-    debugger
     if reward.attributes['limited_quantity'] && reward.reward_backers.count + 1 > reward.attributes['limited_quantity']
       errors.add(:reward_id, "no more rewards left")
     end

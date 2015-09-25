@@ -40,8 +40,16 @@ ul {
   display:block;
 }
 
+#main {
+  padding-top: 50px;
+  height: 100%;
+  padding-bottom: 200px;
+}
+
+
 body {
   background: rgb(245, 249, 249);
+  height: 100%;
 }
 
 strong {

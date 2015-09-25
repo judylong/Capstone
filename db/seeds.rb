@@ -36,8 +36,33 @@ r3 = Reward.create(project_id: 1,
                     estimated_delivery: Date.new(2020, 11))
 
 # start of the fun...
-drakken = User.create(email: 'dr.drakken@disney.com', password: 'password', name: 'Dr.Drakken')
+drakken = User.create(email: 'drDrakken@disney.com', password: 'password', name: 'Dr.Drakken')
 vlad = User.create(email: 'vlad@nick.com', password: 'password', name: 'Vlad Masters')
 aku = User.create(email: 'lordAKU@cn.com', password: 'password', name: 'Aku')
 mojo = User.create(email: 'mojo@cn.com', password: 'password', name: 'Mojojojo')
 joker = User.create(email: 'mrJ@dc.com', password: 'password', name: 'Joker')
+giovanni = User.create(email: 'boss@teamrocket.com', password: 'password', name: 'Giovanni')
+hades = User.create(email: 'ruler@underworld.disney.com', password: 'password', name: 'Hades')
+rita = User.create(email: 'rita@mystic.com', password: 'password', name: "Rita Repulsa")
+drClaw = User.create(email: 'drClaw@gogo.com', password: 'password', name: "Doctor Claw")
+biederman = User.create(email: 'kip+biederman@nick.com', password: 'password', name: "Neil Biederman")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1
