@@ -1,7 +1,7 @@
 module Api
   class RewardsController < ApiController
     def create
-      @reward = Reward.new(reward_params).includes(:reward_backers)
+      @reward = Reward.new(reward_params).includes(:reward_backers, :rewardings)
       if @reward.save
         render :show
       else
@@ -10,7 +10,7 @@ module Api
     end
 
     def show
-      @reward = Reward.includes(:reward_backers).find(params[:id])
+      @reward = Reward.includes(:reward_backers, :rewardings).find(params[:id])
       render :show
     end
 
