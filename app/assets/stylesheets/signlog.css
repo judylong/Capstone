@@ -1,10 +1,10 @@
 
-div.signlog-div {
+#main > div.signlog-div {
   border: solid 1px #d9d9de;
   border-radius: 6px;
   width: 400px;
-  margin: 60px auto 20px;
-  padding: 20px;
+  margin: 60px auto 60px auto;
+  padding: 20px 20px 20px 20px;
   font-weight: normal;
   background: white;
 }
@@ -47,3 +47,15 @@ div.signlog-div button:hover{
   background: rgb(36, 174, 67);
   cursor: pointer;
 }
+
+div.signlog-div button.fb {
+  background: rgb(59, 89, 152)
+}
+
+div.signlog-div button.fb:hover {
+  background: rgb(48, 72, 123)
+}
+
+/*#main > div.signlog-div {
+  padding: 20px 20px 20px 20px;
+}*/

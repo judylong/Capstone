@@ -42,21 +42,23 @@ ul {
 
 #main {
   padding-top: 50px;
-  height: 100%;
-  padding-bottom: 150px;
-}
-
-#main > div {
-  padding-bottom: 100px;
+  /*min-height: 100%;*/
 }
 
 #main > div.project-show {
   padding-bottom: 0;
 }
 
+form.big-project-form {
+  padding-bottom: 50px;
+}
+
+html {
+  /*min-height: 100%;*/
+}
+
 body {
   background: rgb(245, 249, 249);
-  height: 100%;
 }
 
 strong {
@@ -157,4 +159,8 @@ div.full-description p {
 div.bottom-content {
   width: 1080px;
   margin: auto;
+}
+
+.hideMeRails {
+  display: none;
 }

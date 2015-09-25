@@ -1,6 +1,7 @@
 Capstone.Views.ProjectForm = Backbone.CompositeView.extend({
   template: JST['projects/project_form'],
   tagName: "form",
+  className: "big-project-form",
   initialize: function() {
     this.listenTo(this.model, "sync", this.render);
     this.addRewardForm();
