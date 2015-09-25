@@ -1,6 +1,6 @@
 <section class="top-section group">
   <div class="title-section">
-    <h1 class:"project-title">Title: <%= project.escape('title') %></h1>
+    <h1 class:"project-title"><%= project.escape('title') %></h1>
     <p>
       by <strong><a href="#users/<%= project.escape('owner_id')%>"><%= project.escape('owner_name')%></a></strong>
     </p>
@@ -27,17 +27,18 @@
   </div>
   <div class="top-row-2 group">
     <div class="blurb">
-      Short Desc: <%= project.escape('description')%>
+      <%= project.escape('description')%>
     </div>
     <div class="owner-desc">
-      <strong>Owner: <%= project.escape('owner_name')%></strong>
+      <strong><%= project.escape('owner_name')%></strong>
       <div class="owner-desc-sub">
         <p>
-          external website: <a href="#"><%= project.escape('owner_name')%></a>
+          Contact: <%= project.escape('owner_email')%>
+          <!-- external website: <a href="#"><%= project.escape('owner_name')%></a> -->
         </p>
         <br>
         <p>
-          <a href="#">See full bio</a>
+          <!-- <a href="#">See full bio</a> -->
         </p>
 
       </div>
@@ -46,10 +47,10 @@
 </section>
 
 <section class="bottom-section group">
-  <div class="bottom-content">
+  <div class="bottom-content group">
     <div class="full-description">
       <h1>About this project</h1>
-      <strong><h1><%= project.escape('full_description')%></h1></strong>
+      <p><%= project.escape('full_description')%></p>
 
     </div>
     <div class="rewards">

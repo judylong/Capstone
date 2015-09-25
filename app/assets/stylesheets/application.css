@@ -85,6 +85,7 @@ div.full-description {
   font-size: 22px;
   margin-top: 50px;
   margin-left: 20px;
+  width: 600px;
   float: left;
 }
 
@@ -133,4 +134,13 @@ div.owner-desc {
   float:right;
   width: 320px;
   padding: 40px 0px;
+}
+
+
+div.full-description h1 {
+  margin-bottom: 20px;
+}
+
+div.full-description p {
+  font-size: 18px;
 }
