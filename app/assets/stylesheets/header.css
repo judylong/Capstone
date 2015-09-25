@@ -32,6 +32,10 @@ div.header-logo {
   float:left;
 }
 
+div.header-logo > img {
+  padding: 17px 20px 16px 20px;
+}
+
 ul.header-list li {
   float: left
 }
@@ -58,7 +62,7 @@ div.header-logo {
   float:left;
 }
 
-nav {
+nav li {
   font-size: 14px;
   font-weight: bold;
 }
