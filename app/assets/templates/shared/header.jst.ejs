@@ -5,8 +5,8 @@
 
   <nav class="primary-nav">
     <ul class="primary-nav-list group">
-      <li><a href="#discover">Discover</a></li>
-      <li><a href="#projects/new">Start a project</a></li>
+      <a href="#discover"><li>Discover</li></a>
+      <a href="#projects/new"><li>Start a project</li></a>
     </ul>
   </nav>
 
@@ -19,10 +19,10 @@
   <nav class="user-nav">
     <ul class="user-nav-list group">
       <% if(currentUser.isLoggedIn()) { %>
-        <li><a href="#" id="log-out-link">Log out</a></li>
+        <a href="#" id="log-out-link"><li>Log out</li></a>
       <% } else { %>
-        <li><a href="#users/new">Sign Up</a></li>
-        <li><a href="#session/new">Log in</a></li>
+        <a href="#users/new"><li>Sign Up</li></a>
+        <a href="#session/new"><li>Log in</li></a>
       <% } %>
     </ul>
   </nav>

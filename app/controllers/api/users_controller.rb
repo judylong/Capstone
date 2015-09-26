@@ -6,7 +6,7 @@ module Api
     end
 
     def index
-      @users = User.includes(:backed_projects, :rewardings).all
+      @users = User.includes(:backed_projects, :rewardings, :projects).all
       render :index
     end
 
