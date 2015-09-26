@@ -1,7 +1,7 @@
-<% if (results.total_count || results.count) { %>
+<% if (results.length) { %>
   <h1>
-    Explore <label class="result-total-count"><%= results.total_count || results.count %></label>
-    <% if (results.total_count == 1 || results.count == 1) {%>
+    Explore <label class="result-total-count"><%= results.length %></label>
+    <% if (results.length === 1) {%>
       project
     <% } else { %>
       projects

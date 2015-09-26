@@ -1,6 +1,6 @@
 class Project < ActiveRecord::Base
   include PgSearch
-  multisearchable :against => [:description, :full_description, :title]
+  multisearchable :against => [:description, :full_description, :title, :owner_name]
   pg_search_scope :search_by_category, :against => :category
   # validates :goal, format: { with: /^[0-9]+$/, on: :create}
 
@@ -26,4 +26,7 @@ class Project < ActiveRecord::Base
 
   has_many :project_backers, through: :rewards, source: :reward_backers
 
+  def owner_name
+    owner.name
+  end
 end

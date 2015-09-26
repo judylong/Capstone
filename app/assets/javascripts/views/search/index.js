@@ -3,17 +3,15 @@ Capstone.Views.SearchResultsIndex = Backbone.CompositeView.extend({
     this.bindScroll();
 
     if (options.category) {
-      this.searchResults = new Capstone.Collections.SearchResults({searchType: "category"});
+      this.searchResults = new Capstone.Collections.SearchResults([] ,{searchType: "category"});
       this.qstring = options.category;
     } else {
-      this.searchResults = new Capstone.Collections.SearchResults({searchType: "query"});
+      this.searchResults = new Capstone.Collections.SearchResults([], {searchType: "query"});
       this.qstring = options.qstring;
     }
 
     this.listenTo(this.searchResults, "sync", this.render);
-
     this.listenTo(this.searchResults, 'add', this.addSearchResultsIndexItem);
-    this.searchResults.each(this.addSearchResultsIndexItem.bind(this));
     this.listenTo(this.searchResults, 'remove', this.removeSearchResultsIndexItem);
 
     this.search()

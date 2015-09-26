@@ -12,9 +12,6 @@ Capstone.Collections.SearchResults = Backbone.Collection.extend({
   },
 
   parse: function(resp) {
-    if (resp.total_count) {
-      this.total_count = resp.total_count;
-    }
     return resp.results;
   },
 
@@ -22,10 +19,7 @@ Capstone.Collections.SearchResults = Backbone.Collection.extend({
     if (attrs._type) {
       var type = attrs._type;
       delete attrs._type;
-    } else {
-      var type = "Project";
     }
-
     return new Capstone.Models[type](attrs);
   }
 
