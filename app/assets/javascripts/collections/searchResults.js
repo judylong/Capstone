@@ -1,5 +1,5 @@
 Capstone.Collections.SearchResults = Backbone.Collection.extend({
-  initialize: function(options) {
+  initialize: function(models, options) {
     this.searchType = options.searchType
   },
 
@@ -16,9 +16,11 @@ Capstone.Collections.SearchResults = Backbone.Collection.extend({
   },
 
   model: function(attrs) {
-    if (attrs._type) {
+    if (attrs._type) { //polymorphic case
       var type = attrs._type;
       delete attrs._type;
+    } else { //category search case
+      var type = "Project";
     }
     return new Capstone.Models[type](attrs);
   }
