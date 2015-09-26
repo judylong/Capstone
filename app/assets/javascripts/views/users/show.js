@@ -1,5 +1,6 @@
 Capstone.Views.UserShow = Backbone.CompositeView.extend({
   template: JST['users/show'],
+  className: "user-show",
   render: function() {
     var content = this.template({user: this.model});
     this.$el.html(content);
