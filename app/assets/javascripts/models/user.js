@@ -13,10 +13,21 @@ Capstone.Models.User = Backbone.Model.extend({
     return this._backed_projects
   },
 
+  created_projects: function() {
+    if (!this._created_projects) {
+      this._created_projects = new Capstone.Collections.Projects();
+    }
+    return this._created_projects;
+  },
+
   parse: function(response) {
     if (response.backed_projects) {
       this.backed_projects().set(response.backed_projects);
       delete response.backed_projects;
+    }
+    if (response.created_projects) {
+      this.created_projects().set(response.created_projects);
+      delete response.created_projects;
     }
     return response;
   },
