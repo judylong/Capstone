@@ -1,0 +1,76 @@
+div.created-index-item {
+  border: 1px solid #d9d9de;
+  background: white;
+  width: 700px;
+  margin: auto;
+  padding: 10px;
+  border-radius: 6px;
+  position: relative;
+  color: #828587;
+  margin-bottom: 20px;
+}
+
+div.created-index-item > a {
+  display: block;
+  float: left;
+  color: #0f2105;
+}
+
+div.created-brief-info > h1 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+div.created-index-item h1 {
+  color: rgb(15, 33, 5);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+div.created-index-item p {
+  font-size: 12px;
+}
+
+div.created-index-item p.desc {
+  font-size: 14px;
+}
+
+img.created-image {
+  display:block;
+  width: 320px;
+  height: 240px;
+  /*overflow: hidden;*/
+  /*width: 100%;*/
+}
+
+div.created-info {
+  float: right;
+  width: 330px;
+}
+
+
+div.created-brief-stats li {
+  float: left;
+  margin-right: 20px;
+}
+
+div.created-brief-stats div.project-progress-bar {
+  background: #d9d9de;
+  border-radius: 3px;
+  height: 6px;
+  padding: 0px;
+  margin-bottom: 10px;
+  width: 318px;
+  overflow: hidden;
+}
+
+div.created-brief-stats div.project-percent-pledged {
+  background: #2bde73;
+  padding: 0px;
+  height: 6px;
+}
+
+div.created-brief-stats {
+  position: absolute;
+  bottom: 20px;
+}

@@ -1,0 +1,40 @@
+<a href="#projects/<%=project.escape('id')%>"><img class="created-image" src="<%= project.escape('image_url') %>"></a>
+
+<div class="created-info group">
+
+  <div class="created-brief-info">
+    <h1><a href="#projects/<%=project.escape('id')%>"><%= project.escape('title') %></a></h1>
+    <p>by <%= project.escape('owner_name')%></p>
+    <br>
+    <p class="desc"><%= project.escape('description')%></p>
+  </div>
+
+  <div class="created-brief-stats group">
+    <div class="project-progress-bar">
+      <div class="project-percent-pledged" style="width: <%= Math.floor(parseInt(project.escape('amt_funded'))/parseInt(project.escape('goal'))*100) %>%">
+      </div>
+    </div>
+    <ul>
+      <li>
+        <h1><%= Math.floor(parseInt(project.escape('amt_funded'))/parseInt(project.escape('goal'))*100) %>%</h1>
+        <p>funded</p>
+      </li>
+
+      <li>
+        <h1>$<%= project.escape('amt_funded')%></h1>
+        <p>pledged</p>
+      </li>
+
+      <li>
+        <h1><%= project.escape('num_project_backers')%></h1>
+        <p>backers</p>
+      </li>
+
+      <li>
+        <h1><%= project.escape('time_left')%></h1>
+        <p>days to go</p>
+      </li>
+    </ul>
+  </div>
+
+</div>
