@@ -8,18 +8,30 @@ Capstone.Views.UserShow = Backbone.CompositeView.extend({
   },
   initialize: function() {
     this.listenTo(this.model, "sync", this.render);
-    this.model.backed_projects().each(this.addProjectItem.bind(this));
-    this.listenTo(this.model.backed_projects(), "add", this.addProjectItem);
-    this.listenTo(this.model.backed_projects(), "remove", this.removeProjectItem);
+    this.model.backed_projects().each(this.addBackedProjectItem.bind(this));
+    this.listenTo(this.model.backed_projects(), "add", this.addBackedProjectItem);
+    this.listenTo(this.model.backed_projects(), "remove", this.removeBackedProjectItem);
+
+    this.model.created_projects().each(this.addCreatedProjectItem.bind(this));
+    this.listenTo(this.model.created_projects(), "add", this.addCreatedProjectItem);
+    this.listenTo(this.model.created_projects(), "remove", this.removeCreatedProjectItem);
   },
 
-  addProjectItem: function(projectItem) {
+  addBackedProjectItem: function(projectItem) {
     var subview = new Capstone.Views.ProjectsIndexItem({model: projectItem}).bind(this);
     this.addSubview('.backed-projects-list', subview);
   },
 
-  removeProjectItem: function(projectItem) {
+  removeBackedProjectItem: function(projectItem) {
     this.removeModelSubview('.backed-projects-list', projectItem);
-  }
+  },
 
+  addCreatedProjectItem: function(projectItem) {
+    var subview = new Capstone.Views.ProjectsIndexItem({model: projectItem}).bind(this);
+    this.addSubview('.created-projects-list', subview);
+  },
+
+  removeCreatedProjectItem: function(projectItem) {
+    this.removeModelSubview('.created-projects-list', projectItem);
+  }
 })
