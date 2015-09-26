@@ -6,7 +6,7 @@ Capstone.Views.ProjectsIndexItem = Backbone.View.extend({
   className: "projects-index-item group",
   render: function() {
     var content = this.template({project: this.model});
-    this.$el.append(content);
+    this.$el.html(content);
     return this;
   }
 });

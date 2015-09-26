@@ -27,7 +27,7 @@ Capstone.Views.UserShow = Backbone.CompositeView.extend({
   },
 
   addCreatedProjectItem: function(projectItem) {
-    var subview = new Capstone.Views.ProjectsIndexItem({model: projectItem}).bind(this);
+    var subview = new Capstone.Views.CreatedIndexItem({model: projectItem}).bind(this);
     this.addSubview('.created-projects-list', subview);
   },
 
