@@ -4,14 +4,6 @@ Capstone.Models.User = Backbone.Model.extend({
   toJSON: function() {
     var json = { user: _.clone(this.attributes) };
     return json;
-  }
-});
-
-Capstone.Models.CurrentUser = Capstone.Models.User.extend({
-  url: "/api/session",
-
-  initialize: function(options) {
-    this.listenTo(this, "change", this.fireSessionEvent);
   },
 
   backed_projects: function() {
@@ -27,6 +19,15 @@ Capstone.Models.CurrentUser = Capstone.Models.User.extend({
       delete response.backed_projects;
     }
     return response;
+  },
+
+});
+
+Capstone.Models.CurrentUser = Capstone.Models.User.extend({
+  url: "/api/session",
+
+  initialize: function(options) {
+    this.listenTo(this, "change", this.fireSessionEvent);
   },
 
   isLoggedIn: function() {
