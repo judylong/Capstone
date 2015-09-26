@@ -9,13 +9,13 @@ A clone of Kickstarter built on Rails and Backbone. Users can:
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
-- [ ] Create accounts
+- [x] Create accounts
 - [x] Create sessions (log in)
-- [ ] Create projects
-- [ ] View project
-- [ ] View projects by category
-- [ ] Filter/sort projects in category
-- [ ] Back projects
+- [x] Create projects
+- [x] View project
+- [x] View projects by category
+- [x] Filter/sort projects in category
+- [x] Back projects
 
 ## Design Docs
 * [View Wireframes][views]
@@ -71,7 +71,7 @@ collection, but they will fetch from the new `category` route.
 - [ ] Custom project urls
 - [ ] Pagination/infinite scroll
 - [ ] "Remind me" email feature
-- [ ] Search projects via search bar
+- [x] Search projects via search bar
 - [ ] Administrator users
 - [ ] Staff picks
 - [ ] Popular projects
