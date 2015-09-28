@@ -42,7 +42,10 @@ Capstone.Views.ProjectForm = Backbone.CompositeView.extend({
       success: function(){
         this.collection.add(this.model)
         Backbone.history.navigate("", { trigger: true })
-      }.bind(this)
+      }.bind(this),
+      error: function(model, resp, data){
+        alert(resp.responseJSON.join('\n'));
+      }
     });
   },
 
