@@ -57,7 +57,7 @@ zim = User.create(email: 'zim@irk.com', password:'password', name: 'Zim')
 
 guest = User.create(email: 'one@example.com', password: 'password', name: "User1")
 Project.create(title: "Drakken's World",
-                description: 'I plan to use the death ray I make to rule the world',
+                description: 'I plan to use the death ray I make to rule the world.',
                 full_description: 'The details are in the works, but I my plans will succeed with your help.',
                 goal: 5000,
                 end_date: Date.new(2020, 11),
@@ -162,7 +162,7 @@ Reward.create(project_id: 4,
                 estimated_delivery: Date.new(2020, 11),
                 shipping_location: "Ships anywhere in the world")
 
-Project.create(title: 'An documentary on yours truely',
+Project.create(title: 'A documentary on yours truely',
                 description: 'I plan to make a documentary about me of course.',
                 full_description: 'The world should know about my great plans from over the years.',
                 goal: 500,
@@ -218,7 +218,7 @@ Reward.create(project_id: 6,
 
 
 Project.create(title: 'The New Underworld',
-                description: "It's been so many years in the underworld, and I think it's time for a change.",
+                description: "It's been so many years in the Underworld, and I think it's time for a change.",
                 full_description: "I'll use the funds to make some changes. Maybe one of those spinning tops of dooms will liven the place up.",
                 goal: 500,
                 end_date: Date.new(2020, 11),
