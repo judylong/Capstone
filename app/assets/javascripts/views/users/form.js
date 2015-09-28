@@ -29,9 +29,8 @@ Capstone.Views.UsersForm = Backbone.View.extend({
         this.collection.add(this.model, { merge: true });
         Backbone.history.navigate("", { trigger: true });
       }.bind(this),
-      error: function(data){
-        alert("Form invalid. Let the user know what went wrong.");
-        console.log(data);
+      error: function(model, resp, data){
+        alert(resp.responseJSON.join('\n'));
       }
     })
   }

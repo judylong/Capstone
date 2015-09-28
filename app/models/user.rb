@@ -30,11 +30,8 @@ class User < ActiveRecord::Base
   validates_attachment_content_type :avatar, content_type: /\Aimage\.*\Z/
 
   def email_and_password_confirmation
-    if (password_confirmation)
-      errors.add(:password, "bad password re-type") if password != password_confirmation
-    elsif (email_confirmation)
-      errors.add(:password, "bad email re-type") if email != email_confirmation
-    end
+    errors.add(:password, "does not match password confirmation") if password_confirmation && password != password_confirmation
+    errors.add(:email, "does not match email confirmation") if email_confirmation && email != email_confirmation
   end
 
   def self.find_or_create_by_auth_hash(auth_hash)
