@@ -22,7 +22,7 @@ class Project < ActiveRecord::Base
     class_name: "User",
     foreign_key: "owner_id"
 
-  has_many :rewards
+  has_many :rewards, -> { order "pledge_amount ASC" }
 
   has_many :project_backers, through: :rewards, source: :reward_backers
 
