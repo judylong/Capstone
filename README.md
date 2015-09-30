@@ -1,11 +1,11 @@
-# Villian-E
+# Villain-E
 
 [Heroku link][heroku]
 
 [heroku]: mycapstone.herokuapp.com
 
 ## Features
-Villian-E app allows users to create campaign projects and back the campaign projects of others. When creating a project, users can upload an image file and create as many rewards for their projects as they see fit.
+Villain-E app allows users to create campaign projects and back the campaign projects of others. When creating a project, users can upload an image file and create as many rewards for their projects as they see fit.
 
 Users also have the option of logging in with their Facebook account.
 
