@@ -1,13 +1,15 @@
-# NameTBD
+# Villian-E
 
 [Heroku link][heroku]
 
 [heroku]: mycapstone.herokuapp.com
 
-## Minimum Viable Product
-A clone of Kickstarter built on Rails and Backbone. Users can:
+## Features
+Villian-E app allows users to create campaign projects and back the campaign projects of others. When creating a project, users can upload an image file and create as many rewards for their projects as they see fit.
 
-<!-- This is a Markdown checklist. Use it to keep track of your progress! -->
+Users also have the option of logging in with their Facebook account.
+
+Users can browse projects by category via the Discover page. Users can search for a project using the search bar, which will return projects whose creator's name, project title, or contents of the short blurb/description match user's the query string.
 
 - [x] Create accounts
 - [x] Create sessions (log in)
@@ -16,62 +18,31 @@ A clone of Kickstarter built on Rails and Backbone. Users can:
 - [x] View projects by category
 - [x] Filter/sort projects in category
 - [x] Back projects
+- [x] Pagination/infinite scroll
+- [x] Search projects via search bar
 
-## Design Docs
-* [View Wireframes][views]
-* [DB schema][schema]
+## Languages
+- Ruby
+- Javascript
+- HTML/CSS
 
-[views]: ./docs/views.md
-[schema]: ./docs/schema.md
+## Frameworks
+- Ruby on Rails
+- Backbone.js
 
-## Implementation Timeline
+## Libraries and Technologies
+- jQuery / AJAX
+- paperclip / AWS
+- pg_search
+- kaminari
+- figaro
+- jbuilder
+- omniauth
 
-### Phase 1: User Authentication, Project Creation (~1.5 day)
-I will implement user authentication in Rails based on the practices learned at
-App Academy. By the end of this phase, users will be able to create projects using
-a simple text form in a Rails view. The most important part of this phase will
-be pushing the app to Heroku and ensuring that everything works before moving on
-to phase 2.
-
-[Details][phase-one]
-
-### Phase 2: Viewing Projects (~2 days)
-I will add API routes to serve project data as JSON, then add Backbone
-models and collections that fetch data from those routes. By the end of this
-phase, users will be able to create projects and view projects, all
-inside a single Backbone app.
-
-[Details][phase-two]
-
-### Phase 3: Editing and Displaying Projects (~2 days)
-I plan to use third-party libraries to add functionality to the `ProjectForm` and
-`ProjectShow` views in this phase. I also plan to integrate Filepicker for file upload so
-users can add images to their project view.
-
-[Details][phase-three]
-
-### Phase 4: Backing Projects (~1-2 days)
-I'll start by adding a `back_project` route that uses the `current_user`'s
-`projects_backed` association to add the user as a backer and add the project in the
-user's backed projects list. On the Backbone side, I'll update the project's view
-whose `backers` collection fetches from the new route.  
-
-[Details][phase-four]
-
-### Phase 5: Filtering Projects (~2 days)
-I'll need to add a `category` route to the Projects controller. On the
-Backbone side, there will be a `Category` composite view that has
-and `Project` subviews. These views will use plain old `projects`
-collection, but they will fetch from the new `category` route.
-
-[Details][phase-five]
-
-### Bonus Features (TBD)
+### Future Features
 - [ ] Star projects
 - [ ] Custom project urls
-- [ ] Pagination/infinite scroll
 - [ ] "Remind me" email feature
-- [x] Search projects via search bar
 - [ ] Administrator users
 - [ ] Staff picks
 - [ ] Popular projects
@@ -80,9 +51,3 @@ collection, but they will fetch from the new `category` route.
 - [ ] User profile pie chart of backed project categories
 - [ ] Subcategories
 - [ ] Markdown editor for `ProjectForm`.
-
-[phase-one]: ./docs/phases/phase1.md
-[phase-two]: ./docs/phases/phase2.md
-[phase-three]: ./docs/phases/phase3.md
-[phase-four]: ./docs/phases/phase4.md
-[phase-five]: ./docs/phases/phase5.md
