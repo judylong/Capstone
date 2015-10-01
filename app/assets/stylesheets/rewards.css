@@ -12,10 +12,11 @@ ul.rewards-list {
 
 ul.rewards-list li {
   /*border: solid 1px #d9d9de;*/
-  width: 320px;
+  width: 270px;
   margin: 20px 10px;
   padding: 20px;
   background: #f7fafa;
+  font-size: 14px;
 }
 
 ul.rewards-list li:hover {

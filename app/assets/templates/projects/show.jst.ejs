@@ -22,12 +22,13 @@
       <h1><%= project.escape('time_left')%></h1>
       <strong>days to go</strong>
       <br>
-      <label>(End date: <%= project.escape('end_date')%>)</label>
+      <br>
+      <p class="disclose">This project will only be funded if at least $<%= project.escape('goal')%> is pledged by <%= project.escape('end_date')%>.</p>
     </div>
   </div>
   <div class="top-row-2 group">
     <div class="blurb">
-      <%= project.escape('description')%>
+      <p><%= project.escape('description')%></p>
     </div>
     <div class="owner-desc">
       <strong><%= project.escape('owner_name')%></strong>
