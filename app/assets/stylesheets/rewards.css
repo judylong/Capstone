@@ -17,12 +17,44 @@ ul.rewards-list li {
   padding: 20px;
   background: #f7fafa;
   font-size: 14px;
+  position: relative;
 }
 
 ul.rewards-list li:hover {
-  border-radius: 6px;
+}
+
+div.reward-hover {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
   background: rgb(60, 221, 101);
-  color: rgb(45, 200, 80);
+  border-radius: 0px;
+  transition: opacity 200ms, border-radius 200ms;
+  color: white;
+}
+
+div.reward-hover p {
+  text-align: center;
+  font-size: 40px;
+  /*margin: auto;*/
+  position: relative;
+  font-weight: 300;
+  top: 35%;
+  transition-duration: 200ms;
+}
+
+div.reward-hover:hover {
+  opacity: 100;
+  border-radius: 6px;
+  transition: opacity 200ms, border-radius 200ms;
+}
+
+div.reward-hover:hover p {
+  transform: scale(.5);
+  transition-duration: 200ms;
 }
 
 li.become-backer {
