@@ -2,7 +2,7 @@
 
 [Heroku link][heroku]
 
-[heroku]: mycapstone.herokuapp.com
+[heroku]: https://villain-e.heroku.com
 
 ## Features
 Villain-E app allows users to create campaign projects and back the campaign projects of others. When creating a project, users can upload an image file and create as many rewards for their projects as they see fit.
