@@ -20,7 +20,7 @@ module Api
     end
 
     def show
-      @project = Project.includes(:rewards, :project_backers).find(params[:id])
+      @project = Project.includes(:rewards, :owner, :project_backers).find(params[:id])
       render :show
     end
 

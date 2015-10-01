@@ -162,7 +162,7 @@ Reward.create(project_id: 4,
                 estimated_delivery: Date.new(2020, 11),
                 shipping_location: "Ships anywhere in the world")
 
-Project.create(title: 'A documentary on yours truely',
+Project.create(title: 'A documentary on yours truly',
                 description: 'I plan to make a documentary about me of course.',
                 full_description: 'The world should know about my great plans from over the years.',
                 goal: 500,

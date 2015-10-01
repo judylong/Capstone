@@ -1,4 +1,5 @@
-json.extract! project, :title, :description, :full_description, :goal, :end_date, :owner_id, :category, :id
+json.extract! project, :title, :description, :full_description, :goal, :owner_id, :category, :id
+json.end_date project.end_date.strftime('%a, %b %d %Y %I:%M %p')
 json.owner_name project.owner_name
 json.owner_email project.owner.email
 json.rewards project.rewards, partial: 'api/rewards/reward', as: :reward
