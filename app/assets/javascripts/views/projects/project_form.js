@@ -50,8 +50,6 @@ Capstone.Views.ProjectForm = Backbone.CompositeView.extend({
   },
 
   fileInputChange: function(e) {
-    console.log(e.currentTarget.files[0]);
-
     var that = this;
     var file = e.currentTarget.files[0];
     var reader = new FileReader();

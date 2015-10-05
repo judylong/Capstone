@@ -84,10 +84,8 @@ Capstone.Models.CurrentUser = Capstone.Models.User.extend({
   fireSessionEvent: function() {
     if (this.isLoggedIn()){
       this.trigger("logIn");
-      console.log("currentUser is signed in!", this);
     } else {
       this.trigger("logOut");
-      console.log("currentUser is signed out!", this);
     }
   }
 });

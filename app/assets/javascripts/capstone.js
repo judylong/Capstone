@@ -11,7 +11,6 @@ window.Capstone = {
     Capstone.categories = categories
     Capstone.shipping = shipping
     Capstone.logo = $('.logo-url').html()
-    // debugger
     this.header = new Capstone.Views.Header({el: "#header"});
     this.footer = new Capstone.Views.Footer({el: "#footer"})
     this.router = new Capstone.Routers.Users({$rootEl: $("#main")})
