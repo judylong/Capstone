@@ -1,12 +1,12 @@
 module Api
   class UsersController < ApiController
     def show
-      @user = User.includes(:backed_projects, :rewardings, :projects, :reward_backers, :rewardings, :owner).find(params[:id])
+      @user = User.includes(:backed_projects, :rewardings, :projects, :rewardings).find(params[:id])
       render :show
     end
 
     def index
-      @users = User.includes(:backed_projects, :rewardings, :projects, :reward_backers, :rewardings, :owner).all
+      @users = User.includes(:backed_projects, :rewardings, :projects, :rewardings).all
       render :index
     end
 
