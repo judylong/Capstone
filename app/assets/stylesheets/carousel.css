@@ -1,0 +1,107 @@
+div.carousel {
+  height: 550px;
+  width: 1150px;
+  position: relative;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+div.carousel > div.items {
+  position: relative;
+  overflow: hidden;
+
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+div.items > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+div.items img {
+  height: 100%;
+  width: 100%;
+}
+
+div.carousel > div.items > *:not(.active) {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 500ms linear;
+}
+
+div.carousel > div.items > *.active {
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: opacity 500ms linear;
+}
+
+div.carousel h1 {
+  position: absolute;
+  top: 35%;
+  text-align: center;
+  margin-left: 40%;
+  margin-right: 40%;
+  color: white;
+  font-size: 32px;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+ul.carousel-circles {
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  bottom: 0;
+  left: 45%;
+}
+
+a.slide-right {
+  float: left;
+}
+
+a.slide-left {
+  float: right;
+}
+
+li.carousel-circle {
+  height: 12px;
+  width: 12px;
+  border-radius: 10px;
+  background: #f7fafa;
+  opacity: 0.5;
+  float: left;
+  margin: 3px;
+}
+
+li.carousel-circle:hover{
+  cursor: pointer;
+}
+
+li.carousel-circle.active {
+  color: white;
+}
+
+img.slide-right {
+  position: absolute;
+  top: 45%;
+  left: 20px;
+  width: 32px;
+  height: 64px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+img.slide-left {
+  position: absolute;
+  top: 45%;
+  right: 20px;
+  width: 32px;
+  height: 64px;
+  z-index: 1;
+  cursor: pointer;
+}
