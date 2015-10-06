@@ -1,4 +1,4 @@
-<h1> <%= user.escape('name') %></h1>
+<h1 class="user-show-h1"> <%= user.escape('name') %></h1>
 <p>
   Backed <%= user.escape('num_backed_projects') %>
   <% if (user.escape('num_backed_projects') == 1) { %>
@@ -9,12 +9,9 @@
 </p>
 <br>
 <br>
-<h1>Backed Projects</h1>
-<div class="backed-projects-list group">
 
-</div>
+<h2 class="user-show-h2">Backed Projects</h2>
+<div class="backed-projects-list group"></div>
 
-<h1>Created Projects</h1>
-<div class="created-projects-list group">
-
-</div>
+<h2 class="user-show-h2">Created Projects</h2>
+<div class="created-projects-list group"></div>
