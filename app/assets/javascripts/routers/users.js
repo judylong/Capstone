@@ -6,16 +6,22 @@ Capstone.Routers.Users = Backbone.Router.extend({
   },
 
   routes: {
-    "":"index",
+    "":"landing",
+    "index":"index",
     "projects/new":"newProject",
     "projects/:id":"showProject",
     "users/new":"newUser",
     "users/:id":"showUser",
     "session/new":"logIn",
-    "_=_":"index",
+    "_=_":"landing",
     "search_results/:qstring":"showResults",
     "discover":"discoverShow",
     "categories/:category":"showCategoryResults"
+  },
+
+  landing: function() {
+    var view = new Capstone.Views.Landing();
+    this._swapView(view);
   },
 
   showCategoryResults: function(category) {
