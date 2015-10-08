@@ -4,6 +4,8 @@ Capstone.Views.LogIn = Backbone.View.extend({
   initialize: function(options) {
     this.callback = options.callback;
     this.listenTo(Capstone.currentUser, "logIn", this.logInCallback);
+    this.guestModel = options.guestModel;
+    this.usersCollection = options.usersCollection;
   },
 
   render: function() {
@@ -43,11 +45,20 @@ Capstone.Views.LogIn = Backbone.View.extend({
 
   loginGuest: function(e) {
     e.preventDefault();
+    var guestEmail = "guest" + Math.floor((Math.random() * 1000000) + 1) + "@villainsRule.com"
+    var guestUserData = {name: "Guest", email: guestEmail, email_confirmation: guestEmail, password: "password", password_confirmation: "password"}
 
-    Capstone.currentUser.logIn({
-      email: "one@example.com",
-      password: "password"
+    this.guestModel.save(guestUserData, {
+      success: function() {
+        Capstone.currentUser.fetch();
+        this.usersCollection.add(this.guestModel, { merge: true });
+        Backbone.history.navigate("", { trigger: true });
+      }.bind(this),
+      error: function(model, resp, data){
+        alert(resp.responseJSON.join('\n'));
+      }
     })
+
   }
-  
+
 })

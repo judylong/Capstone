@@ -87,8 +87,14 @@ Capstone.Routers.Users = Backbone.Router.extend({
 
   logIn: function(callback) {
     if (!this._requireLoggedOut(callback)) { return; }
+
+    var guestModel = new this.collection.model();
+    var usersCollection = this.collection;
+
     var view = new Capstone.Views.LogIn({
-      callback: callback
+      callback: callback,
+      guestModel: guestModel,
+      usersCollection: usersCollection
     });
     this._swapView(view);
   },
