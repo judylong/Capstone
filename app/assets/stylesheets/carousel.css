@@ -84,7 +84,7 @@ li.carousel-circle:hover{
 }
 
 li.carousel-circle.active {
-  color: white;
+  opacity: 1;
 }
 
 img.slide-right {

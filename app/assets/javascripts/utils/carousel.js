@@ -1,10 +1,12 @@
 Capstone.Carousel = function (el) {
   this.$el = $(el);
   this.$items = this.$el.find(".items").children();
+  this.$dots = this.$el.find(".carousel-circles").children();
   this.activeIdx = 0;
   this.transitioning = false;
 
   this.$items.eq(0).addClass("active");
+  this.$dots.eq(0).addClass("active");
 
   this.$el.on("click", "img.slide-left", this.slideLeft.bind(this));
   this.$el.on("click", "img.slide-right", this.slideRight.bind(this));
@@ -20,17 +22,22 @@ Capstone.Carousel.prototype.jumpSlide = function(e) {
   this.transitioning = true;
 
   var $oldItem = this.$items.eq(this.activeIdx);
+  var $oldDot = this.$dots.eq(this.activeIdx);
+  $oldDot.removeClass("active");
+
   this.activeIdx = $(e.currentTarget).data("id");
   var $newItem = this.$items.eq(this.activeIdx);
+  var $newDot = this.$dots.eq(this.activeIdx);
 
   $newItem.addClass("active");
+  $newDot.addClass("active");
   $oldItem.one("transitionend", (function () {
     $oldItem.removeClass("active");
     this.transitioning = false;
   }).bind(this));
 
   setTimeout((function () {
-    $oldItem.removeClass();
+    $oldItem.removeClass("active");
   }).bind(this), 0);
 };
 
@@ -41,11 +48,16 @@ Capstone.Carousel.prototype.slide = function (dir) {
   this.transitioning = true;
 
   var $oldItem = this.$items.eq(this.activeIdx);
+  var $oldDot = this.$dots.eq(this.activeIdx);
+  $oldDot.removeClass("active")
   this.activeIdx =
     (this.activeIdx + dir + this.$items.length) % this.$items.length;
   var $newItem = this.$items.eq(this.activeIdx);
+  var $newDot = this.$dots.eq(this.activeIdx);
 
   $newItem.addClass("active");
+  $newDot.addClass("active");
+
   $oldItem.one("transitionend", (function () {
     $oldItem.removeClass("active");
     this.transitioning = false;
