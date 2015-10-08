@@ -20,6 +20,7 @@ Users can browse projects by category via the Discover page. Users can search fo
 - [x] Back projects
 - [x] Pagination/infinite scroll
 - [x] Search projects via search bar
+- [x] View a user's backed and created projects
 
 ## Languages
 - Ruby

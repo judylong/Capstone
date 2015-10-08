@@ -28,8 +28,14 @@ Capstone.Views.RewardItem = Backbone.View.extend({
         this.project.set({amt_funded: this.project.get('amt_funded') + this.model.get('pledge_amount')});
         this.render();
       }.bind(this),
-      error: function() {
-        alert('cannot back project')
+      error: function(model, resp) {
+        if (resp.responseJSON.indexOf("Backer user can only back once") != -1) {
+          alert('You have already backed this project.')
+        } else if (resp.responseJSON.indexOf("Reward no more rewards left") != -1) {
+          alert('This type of reward is all gone!')
+        } else {
+          alert('You cannot back this project')
+        }
       }
     })
   },
