@@ -191,7 +191,7 @@ Reward.create(project_id: 5,
 
 
 Project.create(title: 'Our corp needs you',
-                description: 'Team Rocket need you.',
+                description: 'Team Rocket needs you.',
                 full_description: 'Help the cause and join us.',
                 goal: 500,
                 end_date: Date.new(2020, 11),
