@@ -66,3 +66,7 @@ form.big-project-form {
 strong {
   font-weight: 700;
 }
+
+strong a {
+  color: rgb(235, 23, 36);
+}
