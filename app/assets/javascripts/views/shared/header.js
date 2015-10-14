@@ -5,6 +5,7 @@ Capstone.Views.Header = Backbone.View.extend({
   },
 
   events: {
+    "click #me":"toggleDropdown",
     "click #log-out-link": "logOut",
     "submit .query-form": "redirectSearchResults"
   },
@@ -29,5 +30,11 @@ Capstone.Views.Header = Backbone.View.extend({
   redirectSearchResults: function(e) {
     e.preventDefault();
     Backbone.history.navigate("search_results/"+$(".query").val(), {trigger: true})
-  }
+  },
+
+  toggleDropdown: function(e) {
+    e.preventDefault();
+    $(".header-drop").toggleClass("hideMe")
+  },
+
 });

@@ -19,7 +19,12 @@
   <nav class="user-nav">
     <ul class="user-nav-list group">
       <% if(currentUser.isLoggedIn()) { %>
-        <a href="#" id="log-out-link"><li>Log out</li></a>
+        <li id="me">Me</li>
+        <div class="header-drop hideMe">
+          <a href="#users/<%= currentUser.id%>">My Profile</a>
+          <br>
+          <a href="#" id="log-out-link">Log out</a>
+        </div>
       <% } else { %>
         <a href="#users/new"><li>Sign Up</li></a>
         <a href="#session/new"><li>Log in</li></a>

@@ -85,3 +85,24 @@ nav.query-nav {
   margin-top: 16px;
   float: left;
 }
+
+div.header-drop {
+  position: absolute;
+  z-index: 50;
+  top: 58px;
+  right: 0;
+  background: white;
+  padding: 30px;
+}
+
+div.header-drop a {
+  font-size: 14px;
+}
+
+div.hideMe {
+  display: none;
+}
+
+#me {
+  cursor: pointer;
+}
