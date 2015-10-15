@@ -38,6 +38,7 @@ div.reward-hover {
 
 div.gone {
   background: rgb(130,133,135);
+  cursor: default;
 }
 
 div.reward-hover p {
