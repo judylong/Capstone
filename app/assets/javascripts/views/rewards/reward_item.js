@@ -3,6 +3,9 @@ Capstone.Views.RewardItem = Backbone.View.extend({
   render: function() {
     var content = this.template({reward: this.model});
     this.$el.html(content);
+    if (this.model.attributes.num_reward_backers === this.model.attributes.limited_quantity ) {
+      this.$el.find(".gone").removeClass("hideMe");
+    }
     return this;
   },
   tagName: "li",
