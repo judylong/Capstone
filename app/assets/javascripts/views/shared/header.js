@@ -2,12 +2,19 @@ Capstone.Views.Header = Backbone.View.extend({
   initialize: function(options) {
     this.listenTo(Capstone.currentUser, "logIn logOut", this.render);
     this.render();
+
+    $(document).on('click', function(e) {
+      if (!$(e.target).closest('.user-nav').length) {
+        this.hideDrop();
+      }
+    }.bind(this))
   },
 
   events: {
     "click #me":"toggleDropdown",
     "click #log-out-link": "logOut",
-    "submit .query-form": "redirectSearchResults"
+    "submit .query-form": "redirectSearchResults",
+    "click .header-drop > a": "hideDrop"
   },
 
   template: JST['shared/header'],
@@ -36,5 +43,9 @@ Capstone.Views.Header = Backbone.View.extend({
     e.preventDefault();
     $(".header-drop").toggleClass("hideMe")
   },
+
+  hideDrop: function(e) {
+    $(".header-drop").addClass("hideMe");
+  }
 
 });
