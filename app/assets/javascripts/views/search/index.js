@@ -13,7 +13,7 @@ Capstone.Views.SearchResultsIndex = Backbone.CompositeView.extend({
     this.listenTo(this.searchResults, "sync", this.render);
     this.listenTo(this.searchResults, 'add', this.addSearchResultsIndexItem);
     this.listenTo(this.searchResults, 'remove', this.removeSearchResultsIndexItem);
-
+    this.errors = false;
     this.search()
   },
 
@@ -22,7 +22,7 @@ Capstone.Views.SearchResultsIndex = Backbone.CompositeView.extend({
   template: JST['search/index'],
 
   render: function() {
-    var content = this.template({results: this.searchResults});
+    var content = this.template({results: this.searchResults, errors: this.errors});
     this.$el.html(content);
     this.attachSubviews();
     return this;
@@ -44,7 +44,10 @@ Capstone.Views.SearchResultsIndex = Backbone.CompositeView.extend({
     this.searchResults.fetch({
       data: {
         query: this.searchResults.query
-      }
+      },
+      success: function(collection, resp) {
+        this.errors = resp.errors;
+      }.bind(this)
     });
   },
 

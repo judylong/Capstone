@@ -6,3 +6,4 @@ json.results do
     end
   end
 end
+json.errors "found nothing" if @search_results.length == 0
