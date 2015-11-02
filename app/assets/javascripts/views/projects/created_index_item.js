@@ -9,9 +9,6 @@ Capstone.Views.CreatedIndexItem = Backbone.CompositeView.extend({
     e.preventDefault();
     this.model.destroy({
       wait: true,
-      success: function() {
-        console.log("destroyed");
-      },
       error: function() {
         alert("Cannot destroy project that has backers!")
       }
