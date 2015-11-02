@@ -3,7 +3,8 @@ class Rewarding < ActiveRecord::Base
   validates :reward_backer, uniqueness: { scope: :reward }
   validate :check_unique_backer
   validate :rewards_remaining
-
+  validate :check_active_project
+  
   belongs_to :reward_backer,
               class_name: "User",
               foreign_key: :backer_id,
@@ -21,6 +22,12 @@ class Rewarding < ActiveRecord::Base
   def rewards_remaining
     if reward.attributes['limited_quantity'] && reward.reward_backers.count + 1 > reward.attributes['limited_quantity']
       errors.add(:reward_id, "no more rewards left")
+    end
+  end
+
+  def check_active_project
+    if project.end_date < DateTime.now
+      errors.add(:project, "funding is over! Sorry!")
     end
   end
 

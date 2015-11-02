@@ -36,6 +36,8 @@ Capstone.Views.RewardItem = Backbone.View.extend({
           alert('You have already backed this project.')
         } else if (resp.responseJSON.indexOf("Reward no more rewards left") != -1) {
           alert('This type of reward is all gone!')
+        } else if (resp.responseJSON.indexOf("Project funding is over! Sorry!") != -1) {
+          alert('This project\'s funding period is over! Sorry!')
         } else {
           alert('You cannot back this project')
         }
