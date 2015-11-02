@@ -24,6 +24,17 @@ module Api
       render :show
     end
 
+    def destroy
+      @project = current_user.projects.find(params[:id])
+      if @project.project_backers.count == 0
+        @project.try(:destroy)
+        render json: {}
+      else
+        @project.errors.add(:project, "cannot destroy project with backers")
+        render json: @project.errors.full_messages, status: :unprocessable_entity
+      end
+    end
+
     private
     def project_params
       params.require(:project).permit(:title,

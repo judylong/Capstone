@@ -74,3 +74,8 @@ div.created-brief-stats {
   position: absolute;
   bottom: 20px;
 }
+
+button.destroyMyPlan {
+  position: absolute;
+  right: 10px;
+}
