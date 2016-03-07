@@ -4,6 +4,9 @@
 
 [heroku]: http://villain-e.judylong.xyz
 
+[![pic][pic-path]][heroku]
+[pic-path]: ./docs/villain-e.png
+
 ## Features
 Villain-E app allows users to create campaign projects and back the campaign projects of others. When creating a project, users can upload an image file and create as many rewards for their projects as they see fit.
 
