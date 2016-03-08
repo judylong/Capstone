@@ -39,9 +39,9 @@ Capstone.Views.ProjectForm = Backbone.CompositeView.extend({
       formData.append("project[image]", file);
     }
     this.model.saveFormData(formData, {
-      success: function(){
-        this.collection.add(this.model)
-        Backbone.history.navigate("", { trigger: true })
+      success: function(model, resp){
+        this.collection.add(this.model);
+        Backbone.history.navigate("#projects/" + resp.id, { trigger: true });
       }.bind(this),
       error: function(model, resp, data){
         alert(resp.responseJSON.join('\n'));
