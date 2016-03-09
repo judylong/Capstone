@@ -17,7 +17,8 @@ Capstone.Views.ProjectForm = Backbone.CompositeView.extend({
   events: {
     "click button.submit-project": "submit",
     "click button.add-reward-form": "addRewardForm",
-    "change #input-project-image": "fileInputChange"
+    "change #input-project-image": "fileInputChange",
+    "click button.fill-in": "fillIn"
   },
 
   addRewardForm: function(e) {
@@ -67,5 +68,22 @@ Capstone.Views.ProjectForm = Backbone.CompositeView.extend({
 
   _updatePreview: function(src){
     this.$el.find("#preview-project-image").attr("src", src);
+  },
+
+  fillIn: function(e) {
+    e.preventDefault();
+    var today = new Date();
+    var future_day = new Date(today.setDate(today.getDate() + 365));
+    this.model.title = "Secret Plot";
+    this.model.description = "Help fund the latest and greatest scheme of the century.";
+    this.model.goal = "1024";
+    this.model.full_description = "This is where I should be detailing more of my plan, but I am too busy feeding my army of puppies.";
+    this.model.end_date = future_day.toJSON().slice(0,10);
+    this.model.reward_dummy_qt = "2";
+    this.model.reward_dummy_desc = "A suprise like nothing the world has ever witnessed.";
+    this.render();
+    this.eachSubview(function(subView) {
+      subView.render();
+    });
   }
 })

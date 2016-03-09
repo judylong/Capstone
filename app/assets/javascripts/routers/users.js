@@ -49,6 +49,13 @@ Capstone.Routers.Users = Backbone.Router.extend({
     var callback = this.newProject.bind(this);
     if(!this._requireLoggedIn(callback)) { return; }
     var model = new Capstone.Models.Project();
+
+    model.title = "";
+    model.description = "";
+    model.goal = "";
+    model.full_description = "";
+    model.end_date = "";
+
     var view = new Capstone.Views.ProjectForm({model: model, collection: Capstone.Collections.projects});
     this._swapView(view);
   },
