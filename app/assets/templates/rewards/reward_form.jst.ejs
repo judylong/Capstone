@@ -2,18 +2,18 @@
 
   <div class="reward-pledge-amt group">
     <label>Pledge amount</label>
-    <input type="number" name="project[rewards][][pledge_amount]">
+    <input type="number" name="project[rewards][][pledge_amount]" value="<%= project.reward_dummy_qt %>">
     <button class="remove-reward-form">Delete Reward</button>
   </div>
 
   <div class="reward-description group">
     <label>Description</label>
-    <textarea name="project[rewards][][description]"></textarea>
+    <textarea name="project[rewards][][description]"><%= project.reward_dummy_desc %></textarea>
   </div>
 
   <div class="reward-estimated-delivery group">
     <label>Estimated delivery</label>
-    <input type="date" name="project[rewards][][estimated_delivery]"%>
+    <input type="date" name="project[rewards][][estimated_delivery]" value="<%= project.end_date %>">
   </div>
 
   <div class="reward-shipping-details group">

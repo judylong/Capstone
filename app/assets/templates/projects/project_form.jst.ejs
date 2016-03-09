@@ -1,5 +1,7 @@
 <input type="hidden" name="owner_id" value="<%= project.get('owner_id')%>">
 
+<button class="fill-in">Pre-Fill Form</button>
+
 <ul class="project-inputs group">
   <li class="project-image group">
     <label>Project image</label>
@@ -12,7 +14,7 @@
   <li class="project-title group">
     <label>Project title</label>
     <div class="inputs-right">
-        <input type=text name="project[title]">
+        <input type=text name="project[title]" value="<%= project['title'] %>">
         <p>
           Your project title and blurb should be simple, specific, and memorable. Our search tools run through these sections of your project, so be sure to incorporate any key words here!
         </p>
@@ -25,7 +27,7 @@
   <li class="project-description group">
     <label>Short Blurb</label>
     <div class="inputs-right">
-      <textarea name="project[description]"></textarea>
+      <textarea name="project[description]"><%= project['description'] %></textarea>
       <p>
         If you had to describe what you're creating in one tweet, how would you do it?
       </p>
@@ -47,7 +49,7 @@
   <li class="project-duration group">
     <label>Funding duration</label>
     <div class="inputs-right">
-      <input type=date name="project[end_date]">
+      <input type=date name="project[end_date]" value="<%= project['end_date'] %>">
       <p>
         We recommend setting a funding duration of 30 days or less. Shorter durations tend to have higher success rates. Once your project has launched, it won’t be possible to change your funding duration.
       </p>
@@ -57,12 +59,12 @@
   <li class="project-goal group">
     <label>Funding Goal</label>
     <div class="inputs-right">
-      <input type="number" name="project[goal]">
+      <input type="number" name="project[goal]" value="<%= project['goal'] %>">
       <p>
         Your funding goal should be the minimum amount needed to complete the project and fulfill (and ship!) all rewards. Because funding is all-or-nothing, you can always raise more than your goal but never less. Once your project has launched, it will not be possible to change your funding goal.
       </p>
       <p>
-        If your project is successfully funded, the following fees will be collected from your funding total: Kickstarter's 5% fee, and payment processing fees (between 3% and 5%). If funding isn't successful, there are no fees.
+        If your project is successfully funded, the following fees will be collected from your funding total: Villain-E's 5% fee, and payment processing fees (between 3% and 5%). If funding isn't successful, there are no fees.
       </p>
     </div>
   </li>
@@ -70,7 +72,7 @@
   <li class="project-description group">
     <label>Full Project Description</label>
     <div class="inputs-right">
-      <textarea name="project[full_description]"></textarea>
+      <textarea name="project[full_description]"><%= project['full_description'] %></textarea>
       <p>
         Use your project description to share more about what you’re raising funds to do and how you plan to pull it off. It’s up to you to make the case for your project.
       </p>
