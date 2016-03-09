@@ -126,3 +126,18 @@ div.proj-img-div {
 #input-project-image {
   border: none;
 }
+
+button.fill-in {
+  display: block;
+  margin: 0 auto;
+
+  border-radius: 3px;
+  border: dashed 1px rgb(217, 217, 222);
+
+  background: rgb(43, 221, 92);
+  color: white;
+}
+
+button.fill-in:hover {
+  background: rgb(29, 184, 92);
+}
