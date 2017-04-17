@@ -4,7 +4,7 @@
 
 [heroku]: http://villain-e.judylong.xyz
 
-[![pic][pic-path]][heroku]
+[![pic](pic-path)][heroku]
 [pic-path]: ./docs/villain-e.png
 
 ## Features
